@@ -1,0 +1,248 @@
+/* RESET & BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: #f9fafb;
+    color: #333;
+    line-height: 1.6;
+}
+a {
+    text-decoration: none;
+    color: #2563eb;
+    transition: color 0.2s ease;
+}
+a:hover {
+    color: #1e40af;
+}
+
+/* 1. HEADER (Menggunakan Gambar) */
+.main-header {
+    background-color: #ffffff;
+    padding: 0; 
+    border-bottom: 2px solid #e5e7eb;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    width: 100%;
+}
+
+.header-image {
+    width: 100%; 
+    height: 130px; 
+    object-fit: cover; 
+    object-position: center; 
+    display: block;
+}
+
+/* 2. NAVIGATION BAR */
+.main-nav {
+    background-color: #facc15; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.nav-links {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    list-style: none;
+    padding: 0 20px;
+    flex-wrap: wrap;
+}
+.nav-links li a {
+    display: block;
+    padding: 15px 20px;
+    color: #111827; 
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+.nav-links li a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    color: #000;
+}
+
+/* ================= TAMBAHAN UNTUK DROPDOWN MENU ================= */
+
+/* Membuat parent <li> menjadi titik acuan posisi dropdown */
+.nav-links li.dropdown {
+    position: relative;
+}
+
+/* Kotak Dropdown (Sembunyi secara default) */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Muncul tepat di bawah kotak PROFIL */
+    left: 0;
+    background-color: #ffffff; /* Latar putih */
+    min-width: 250px; /* Lebar menu dropdown */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* Efek bayangan */
+    z-index: 1000; /* Memastikan dropdown muncul DI ATAS banner hijau */
+    border-top: 3px solid #166534; /* Garis hijau di atas dropdown sebagai aksen */
+}
+
+/* Memunculkan menu saat PROFIL disorot (hover) */
+.nav-links li.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Desain item list di dalam dropdown */
+.dropdown-menu li {
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+/* Teks di dalam dropdown */
+.dropdown-menu li a {
+    padding: 12px 20px;
+    color: #374151; /* Warna teks gelap */
+    text-transform: capitalize; /* Jangan uppercase semua agar enak dibaca */
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Efek saat isi dropdown disorot */
+.dropdown-menu li a:hover {
+    background-color: #f8fafc;
+    color: #166534; /* Teks berubah hijau */
+    padding-left: 25px; /* Efek bergeser sedikit ke kanan saat disorot */
+    transition: all 0.2s ease;
+}
+/* =============================================================== */
+
+/* 3. HERO IMAGE / BANNER BAWAH */
+.hero-section {
+    width: 100%;
+    max-height: 400px; 
+    overflow: hidden;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-bottom: 4px solid #facc15; 
+}
+.hero-section img {
+    width: 100%;
+    height: 100%;
+    min-height: 250px; 
+    object-fit: cover; 
+    object-position: center; 
+    display: block;
+}
+
+/* 4. LAYOUT KONTEN UTAMA & SIDEBAR */
+.content-wrapper {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 40px;
+}
+
+/* Kiri: Main Content */
+.main-content {
+    flex: 7;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.section-title {
+    font-size: 2rem;
+    color: #166534;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #facc15;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Grid Informasi */
+.info-grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.info-item {
+    flex: 1;
+    min-width: 150px;
+}
+.info-item h3 {
+    font-size: 1rem;
+    color: #111827;
+    margin-bottom: 5px;
+}
+.info-item p {
+    font-size: 0.95rem;
+    color: #4b5563;
+}
+
+/* Body Content */
+.content-image {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+/* Kanan: Sidebar */
+.sidebar {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.sidebar-widget h3 {
+    font-size: 1.1rem;
+    color: #111827;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e5e7eb;
+}
+.sidebar-list {
+    list-style: none;
+}
+.sidebar-list li {
+    border-bottom: 1px solid #f3f4f6;
+}
+.sidebar-list li a {
+    display: block;
+    padding: 12px 0;
+    color: #374151;
+    font-size: 0.95rem;
+}
+.sidebar-list li a:hover {
+    color: #166534;
+    padding-left: 5px; 
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+}
+@media (max-width: 600px) {
+    .info-grid {
+        flex-direction: column;
+    }
+    .nav-links {
+        flex-direction: column;
+    }
+    .nav-links li a {
+        text-align: center;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+}
