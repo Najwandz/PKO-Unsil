@@ -229,11 +229,6 @@ a:hover {
 }
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 900px) {
-    .content-wrapper {
-        flex-direction: column;
-    }
-}
 @media (max-width: 600px) {
     .info-grid {
         flex-direction: column;
@@ -244,5 +239,27 @@ a:hover {
     .nav-links li a {
         text-align: center;
         border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    /* ========================================= */
+    /* PERBAIKAN GAMBAR HEADER & BANNER UNTUK HP */
+    /* ========================================= */
+    
+    .header-image {
+        height: auto; /* Membiarkan tinggi menyesuaikan proporsi asli */
+        max-height: 70px; /* Membatasi agar logo tidak terlalu raksasa di layar kecil */
+        object-fit: contain; /* Memastikan seluruh gambar masuk ke layar */
+        padding: 10px;
+    }
+    
+    .hero-section {
+        height: auto;
+        max-height: none; /* Mencabut batasan tinggi maksimal di HP */
+    }
+    
+    .hero-section img {
+        height: auto; 
+        min-height: auto; /* Menghilangkan paksaan tinggi minimal 250px */
+        object-fit: contain; /* Gambar akan mengecil dan tampil utuh 100% tanpa terpotong */
     }
 }
