@@ -5,10 +5,12 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-body {
+html, body {
     background-color: #f9fafb;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden; /* MENGUNCI LAYAR AGAR TIDAK BISA DIGESER KE KANAN/KIRI */
+    width: 100%;
 }
 a {
     text-decoration: none;
@@ -102,10 +104,13 @@ a:hover {
 .content-wrapper {
     max-width: 1200px; margin: 40px auto; padding: 0 20px;
     display: flex; gap: 40px;
+    width: 100%;
 }
 .main-content {
     flex: 7; background-color: #ffffff; padding: 30px;
     border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    max-width: 100%; /* Memastikan konten tidak melebihi layar */
+    overflow: hidden;
 }
 .section-title {
     font-size: 2rem; color: #166534; margin-bottom: 30px;
@@ -117,7 +122,11 @@ a:hover {
 }
 .info-item { flex: 1; min-width: 150px; }
 .info-item h3 { font-size: 1rem; color: #111827; margin-bottom: 5px; }
-.info-item p { font-size: 0.95rem; color: #4b5563; }
+.info-item p { 
+    font-size: 0.95rem; color: #4b5563; 
+    word-wrap: break-word; /* Memaksa teks panjang seperti link turun ke bawah */
+    overflow-wrap: break-word;
+}
 .content-image {
     width: 100%; height: auto; border-radius: 6px; margin-bottom: 20px;
 }
