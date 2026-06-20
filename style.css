@@ -317,10 +317,10 @@ a:hover {
 
 /* ========================================================
    RESPONSIVE DESIGN (DESAIN KHUSUS HP/MOBILE)
-   MEMASUKKAN HAMBURGER MENU & GAYA NAVIGASI UNSIL
+   MEMASUKKAN HAMBURGER MENU & MENGHAPUS SPACE
    ======================================================== */
 
-/* Gaya Tombol Hamburger (Hanya muncul di HP) */
+/* Gaya Default Tombol Hamburger (Disembunyikan di Laptop) */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -332,7 +332,6 @@ a:hover {
     width: 45px;
     height: 45px;
     border-radius: 5px;
-    margin: 10px 20px;
 }
 
 .menu-toggle .bar {
@@ -353,12 +352,27 @@ a:hover {
         flex-direction: column;
     }
     
-    /* Perbaikan Header Gambar agar proporsional di HP */
+    /* GABUNGKAN HEADER & MENU DI HP */
+    .main-header {
+        position: relative; /* Menjadi acuan koordinat tombol */
+        border-bottom: none; /* Hilangkan garis bawah agar menyatu */
+        background-color: #ffffff;
+        z-index: 998;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: flex-end; /* Geser gambar ke kanan agar tidak menabrak tombol */
+        align-items: center;
+        min-height: 70px; /* Tinggi pasti area putih */
+    }
+
     .header-image {
         height: auto; 
-        max-height: 70px; 
+        max-height: 55px; /* Perkecil sedikit agar proporsional sejajar tombol */
         object-fit: contain; 
-        padding: 10px;
+        /* Beri jarak kiri 70px agar tulisan PKO tidak tertutup tombol Hamburger */
+        padding: 5px 15px 5px 70px; 
     }
     
     .hero-section {
@@ -372,24 +386,37 @@ a:hover {
         object-fit: contain; 
     }
 
-    /* === MEMBUAT MENU SEPERTI WEBSITE UNSIL === */
-    .menu-toggle {
-        display: flex; /* Memunculkan tombol garis tiga */
-    }
-
+    /* === NAVIGASI MOBILE === */
     .main-nav {
-        position: relative; /* Agar menu melayang pas di bawah navbar */
+        /* Buat melayang (absolute) agar TIDAK ADA SPACE di bawah banner putih */
+        position: absolute; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 0; /* Tinggi nol agar tidak menutupi klik layar */
         background-color: transparent; 
         box-shadow: none;
     }
 
+    /* Posisikan tombol sejajar ke dalam area banner putih */
+    .menu-toggle {
+        display: flex;
+        position: absolute; 
+        top: 12px; /* Jarak dari atas (sejajar gambar) */
+        left: 15px; /* Jarak dari sisi kiri layar */
+        margin: 0;
+        z-index: 1000; 
+        pointer-events: auto; /* Pastikan bisa diklik */
+    }
+
+    /* Rombak Dropdown Menu */
     .nav-links {
-        display: none; /* Sembunyikan isi menu secara default */
+        display: none; 
         position: absolute;
-        top: 100%;
+        top: 70px; /* Muncul TEPAT DI BAWAH area putih banner (70px) */
         left: 0;
         width: 100%;
-        background-color: #ffffff; /* Background Putih bersih */
+        background-color: #ffffff; 
         flex-direction: column;
         box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
         z-index: 999;
@@ -405,7 +432,7 @@ a:hover {
     .nav-links li {
         width: 100%;
         text-align: left;
-        border-bottom: 1px solid #e5e7eb; /* Garis abu tipis antar menu */
+        border-bottom: 1px solid #e5e7eb; 
     }
 
     .nav-links li a {
@@ -413,7 +440,7 @@ a:hover {
         justify-content: space-between;
         align-items: center;
         padding: 15px 20px;
-        color: #4b5563 !important; /* Teks abu-abu gelap */
+        color: #4b5563 !important; 
         font-weight: 500;
         text-decoration: none;
         background-color: #ffffff;
@@ -427,7 +454,7 @@ a:hover {
     .dropdown-menu {
         display: none !important; 
         position: static;
-        background-color: #f9fafb; /* Latar submenu sedikit lebih gelap */
+        background-color: #f9fafb; 
         width: 100%;
         box-shadow: none;
         padding-left: 15px; 
