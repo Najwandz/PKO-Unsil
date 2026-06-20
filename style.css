@@ -98,7 +98,7 @@ a:hover {
     object-fit: cover; object-position: center; display: block;
 }
 
-/* 4. LAYOUT KONTEN UTAMA */
+/* 4. LAYOUT KONTEN UTAMA (Digunakan di Halaman Tentang Prodi, Sejarah, dll) */
 .content-wrapper {
     max-width: 1200px; margin: 40px auto; padding: 0 20px;
     display: flex; gap: 40px;
@@ -134,28 +134,31 @@ a:hover {
 .sidebar-list li a:hover { color: #166534; padding-left: 5px; }
 
 /* =========================================
-   SEKSI BERITA (NEWS GRID)
+   SEKSI BERITA (DIPERBARUI AGAR 1 KOTAK RAPI DI TENGAH)
 ========================================= */
 .berita-section {
-    max-width: 1200px; margin: 50px auto 20px; padding: 0 20px;
+    max-width: 1200px; margin: 50px auto 80px; padding: 0 20px;
 }
 .berita-header { text-align: center; margin-bottom: 40px; }
 .berita-header h2 {
     color: #1e40af; font-size: 2rem; display: inline-block;
     border-bottom: 3px solid #facc15; padding-bottom: 5px; text-transform: uppercase;
 }
+
+/* Mengubah Grid menjadi Flexbox Center agar otomatis ke tengah jika cuma 1 berita */
 .berita-grid {
-    display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
+    display: flex; justify-content: center; flex-wrap: wrap; gap: 30px;
 }
 .berita-card {
     background: #fff; border-radius: 8px; overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s ease;
     border: 1px solid #e5e7eb;
+    max-width: 400px; width: 100%; /* Menahan agar kotak tidak melebar seukuran layar */
 }
 .berita-card:hover {
     transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1);
 }
-.berita-card img { width: 100%; height: 200px; object-fit: cover; }
+.berita-card img { width: 100%; height: auto; object-fit: cover; border-bottom: 1px solid #f3f4f6;}
 .berita-content { padding: 20px; }
 .berita-title {
     display: block; font-size: 1.05rem; font-weight: bold; color: #1e40af; 
@@ -168,34 +171,34 @@ a:hover {
 .berita-link:hover { text-decoration: underline; color: #166534; }
 
 /* =========================================
-   POP-UP PENGUMUMAN
+   GAYA VMTS
 ========================================= */
-.popup-overlay {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); display: flex;
-    justify-content: center; align-items: center; z-index: 9999;
-    visibility: hidden; opacity: 0; transition: opacity 0.3s ease, visibility 0.3s ease;
+.vmts-container {
+    max-width: 1000px; margin: 40px auto; padding: 20px;
+    background-color: #ffffff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px; line-height: 1.6; color: #333;
 }
-.popup-overlay.show { visibility: visible; opacity: 1; }
-.popup-content {
-    background-color: #fff; width: 90%; max-width: 500px; padding: 30px;
-    border-radius: 10px; position: relative; text-align: center;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
-    transform: translateY(-20px); transition: transform 0.3s ease;
-    border-top: 5px solid #166534;
+.page-title {
+    text-align: center; color: #005a32; margin-bottom: 30px;
+    border-bottom: 2px solid #ffcc00; padding-bottom: 10px;
 }
-.popup-overlay.show .popup-content { transform: translateY(0); }
-.popup-close {
-    position: absolute; top: 10px; right: 15px; font-size: 2rem;
-    color: #6b7280; cursor: pointer; transition: color 0.2s; line-height: 1;
+.vmts-section { margin-bottom: 40px; }
+.vmts-section h2 { color: #005a32; margin-bottom: 15px; font-size: 1.5em; }
+.vmts-section h3 { color: #444; margin-top: 20px; font-size: 1.2em; }
+.visi-text {
+    font-size: 1.2em; font-weight: bold; font-style: italic; text-align: center;
+    color: #005a32; background-color: #f9f9f9; border-left: 5px solid #ffcc00;
+    padding: 20px; margin: 20px 0; border-radius: 4px;
 }
-.popup-close:hover { color: #dc2626; }
-.popup-btn {
-    display: inline-block; background-color: #166534; color: #fff !important;
-    padding: 12px 25px; border-radius: 5px; text-decoration: none;
-    font-weight: bold; margin-top: 15px; transition: background-color 0.2s;
-}
-.popup-btn:hover { background-color: #14532d; }
+.vmts-section ul, .vmts-section ol { margin-left: 20px; margin-bottom: 15px; }
+.vmts-section li { margin-bottom: 8px; }
+.table-responsive { overflow-x: auto; margin-top: 20px; }
+.strategi-table { width: 100%; border-collapse: collapse; font-size: 0.95em; }
+.strategi-table th, .strategi-table td { border: 1px solid #ddd; padding: 12px; vertical-align: top; }
+.strategi-table th { background-color: #005a32; color: #ffffff; text-align: left; }
+.strategi-table tr:nth-child(even) { background-color: #f2f2f2; }
+.strategi-table ul { margin-left: 15px; padding-left: 0; }
+.strategi-table li { margin-bottom: 5px; }
 
 /* ========================================================
    RESPONSIVE DESIGN (HP) & HAMBURGER MENU
@@ -212,9 +215,6 @@ a:hover {
 @media (max-width: 768px) {
     .content-wrapper { flex-direction: column; gap: 20px; }
     .info-grid { flex-direction: column; }
-    
-    /* Berita Responsif */
-    .berita-grid { grid-template-columns: 1fr; }
     
     .main-header { position: relative; border-bottom: none; background-color: #ffffff; z-index: 998; }
     .header-container { display: flex; justify-content: flex-end; align-items: center; min-height: 70px; }
@@ -241,8 +241,4 @@ a:hover {
     
     .dropdown-menu { display: none !important; position: static; background-color: #f9fafb; width: 100%; box-shadow: none; padding-left: 15px; border-top: none; }
     .dropdown.open .dropdown-menu { display: flex !important; flex-direction: column; }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .berita-grid { grid-template-columns: repeat(2, 1fr); }
 }
