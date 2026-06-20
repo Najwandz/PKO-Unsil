@@ -4,60 +4,257 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VMTS Program Studi PKO - Universitas Siliwangi</title>
-    <link rel="stylesheet" href="style.css?v=4">
+    <!-- Versi v=14 untuk memastikan desain terbaru terbaca -->
+    <link rel="stylesheet" href="style.css?v=14">
     <link rel="icon" href="Logo-unsil1.jpg" type="image/jpg">
 </head>
 <body>
+
     <header class="main-header">
         <div class="header-container">
             <img src="Banner-PKO.jpg" alt="Banner PKO Unsil" class="header-image">
         </div>
     </header>
+    
     <nav class="main-nav">
         <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
         <ul class="nav-links" id="nav-menu">
             <li><a href="index.html">BERANDA</a></li>
-            <li class="dropdown"><a href="#profil">PROFIL ▾</a>
+            <li class="dropdown">
+                <a href="#profil">PROFIL ▾</a>
                 <ul class="dropdown-menu">
-                    <li><a href="index.html">Tentang Prodi</a></li><li><a href="sejarah-prodi.html">Sejarah Prodi</a></li>
-                    <li><a href="vmts-prodi.html">VMTS Prodi</a></li><li><a href="#struktur-organisasi-prodi.html">Struktur Organisasi Prodi</a></li>
+                    <!-- Pastikan link ini mengarah ke tentang-prodi.html -->
+                    <li><a href="tentang-prodi.html">Tentang Prodi</a></li>
+                    <li><a href="sejarah-prodi.html">Sejarah Prodi</a></li>
+                    <li><a href="vmts-prodi.html">VMTS Prodi</a></li>
+                    <li><a href="#struktur-organisasi-prodi.html">Struktur Organisasi Prodi</a></li>
                     <li><a href="#dosen.html">Dosen</a></li>
                 </ul>
             </li>
-            <li><a href="#">AKADEMIK</a></li><li><a href="#">KURIKULUM</a></li><li><a href="#">GALERI</a></li><li><a href="#">ALUMNI</a></li>
-            <li class="dropdown"><a href="#tridharma">TRI DHARMA ▾</a>
+            <li><a href="#">AKADEMIK</a></li>
+            <li><a href="#">KURIKULUM</a></li>
+            <li><a href="#">GALERI</a></li>
+            <li><a href="#">ALUMNI</a></li>
+            <li class="dropdown">
+                <a href="#tridharma">TRI DHARMA ▾</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Pendidikan/Pengajaran</a></li><li><a href="#">Penelitian</a></li><li><a href="#">Pengabdian</a></li>
+                    <li><a href="#">Pendidikan/Pengajaran</a></li>
+                    <li><a href="#">Penelitian</a></li>
+                    <li><a href="#">Pengabdian</a></li>
                 </ul>
             </li>
             <li><a href="kontak-kami.html">KONTAK KAMI</a></li>
         </ul>
     </nav>
+
     <section class="hero-section">
         <img id="heroImage" src="Header-PKO.jpg" alt="Header Utama Prodi PKO Unsil">
     </section>
+
     <main class="content-wrapper" style="margin-top: 40px; max-width: 1200px; margin-left: auto; margin-right: auto; padding: 0 20px;">
         <section class="main-content" style="flex: 1;"> 
             <div class="page-header" style="text-align: center; margin-bottom: 40px;">
                 <h1 style="color: #166534; font-size: 2.2rem; margin-bottom: 10px;">Visi, Misi, Tujuan, dan Strategi (VMTS)</h1>
                 <hr style="width: 100px; border: 2px solid #facc15; margin: 0 auto;">
             </div>
+
             <div class="vmts-content" style="text-align: justify; color: #4b5563; font-size: 1.05rem; line-height: 1.8;">
+                
                 <h2 style="color: #166534; font-size: 1.6rem; margin-top: 30px; margin-bottom: 15px; border-bottom: 1px solid #e5e7eb; padding-bottom: 10px;">Visi Program Studi</h2>
+                <p>Visi Program Studi Pendidikan Kepelatihan Olahraga disusun sebagai arah pengembangan jangka panjang yang mencerminkan cita-cita institusi dalam menjawab tantangan dunia olahraga, perkembangan ilmu pengetahuan dan teknologi, serta kebutuhan masyarakat dan pemangku kepentingan. Visi ini menjadi landasan dalam penyelenggaraan tridarma perguruan tinggi dan pengembangan tata kelola program studi secara berkelanjutan.</p>
+                
                 <blockquote style="background-color: #f8fafc; border-left: 5px solid #facc15; padding: 20px; margin: 30px 0; font-style: italic; color: #1f2937; font-size: 1.15rem; text-align: center; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
                     "Menjadi Program Studi Pendidikan Kepelatihan Olahraga unggul dan inovatif berbasis sport science dan teknologi dalam menghasilkan lulusan profesional, berkarakter kebangsaan, dan berjiwa wirausaha pada tingkat nasional tahun 2030."
                 </blockquote>
+
+                <p style="margin-top: 15px;">Visi tersebut mengandung beberapa kata kunci utama, yaitu:</p>
+                <ul style="margin-top: 10px; margin-left: 20px; list-style-type: disc;">
+                    <li style="margin-bottom: 8px;"><strong>Unggul</strong>, yang bermakna memiliki kualitas akademik, tata kelola, dan luaran tridarma yang memenuhi atau melampaui standar nasional.</li>
+                    <li style="margin-bottom: 8px;"><strong>Inovatif</strong>, yaitu mampu mengembangkan gagasan, metode, dan solusi baru dalam pendidikan dan kepelatihan olahraga.</li>
+                    <li style="margin-bottom: 8px;"><strong>Berbasis sport science dan teknologi</strong>, yaitu menjadikan pendekatan ilmiah dan pemanfaatan teknologi sebagai fondasi utama dalam proses pembelajaran, penelitian, dan pengabdian kepada masyarakat.</li>
+                    <li style="margin-bottom: 8px;"><strong>Lulusan profesional</strong>, yaitu memiliki kompetensi akademik, keterampilan praktis, etika profesi, dan kemampuan adaptasi terhadap perkembangan dunia kerja.</li>
+                    <li style="margin-bottom: 8px;"><strong>Berkarakter kebangsaan</strong>, yaitu menjunjung tinggi nilai-nilai Pancasila, integritas, sportivitas, toleransi, dan tanggung jawab sosial.</li>
+                    <li style="margin-bottom: 8px;"><strong>Berjiwa wirausaha</strong>, yaitu mampu menciptakan inovasi dan peluang usaha di bidang olahraga sehingga berkontribusi terhadap pembangunan ekonomi dan industri olahraga nasional.</li>
+                </ul>
+
                 <h2 style="color: #166534; font-size: 1.6rem; margin-top: 40px; margin-bottom: 15px; border-bottom: 1px solid #e5e7eb; padding-bottom: 10px;">Misi Program Studi</h2>
+                <p>Untuk mewujudkan visi tersebut, Program Studi Pendidikan Kepelatihan Olahraga menetapkan lima misi sebagai berikut:</p>
                 <ol style="margin-top: 10px; margin-left: 20px; list-style-type: decimal;">
-                    <li style="margin-bottom: 8px;">Menyelenggarakan pendidikan dan pembelajaran Pendidikan Kepelatihan Olahraga yang berkualitas berbasis <em>sport science</em> dan teknologi untuk menghasilkan lulusan profesional.</li>
-                    <li style="margin-bottom: 8px;">Melaksanakan penelitian inovatif dalam bidang kepelatihan olahraga berbasis <em>sport science</em> dan teknologi yang berkontribusi terhadap pengembangan ilmu pengetahuan dan peningkatan prestasi olahraga.</li>
-                    <li style="margin-bottom: 8px;">Melaksanakan pengabdian kepada masyarakat melalui penerapan ilmu kepelatihan olahraga.</li>
+                    <li style="margin-bottom: 8px;">Menyelenggarakan pendidikan dan pembelajaran Pendidikan Kepelatihan Olahraga yang berkualitas berbasis sport science dan teknologi untuk menghasilkan lulusan profesional.</li>
+                    <li style="margin-bottom: 8px;">Melaksanakan penelitian inovatif dalam bidang kepelatihan olahraga berbasis sport science dan teknologi yang berkontribusi terhadap pengembangan ilmu pengetahuan dan peningkatan prestasi olahraga.</li>
+                    <li style="margin-bottom: 8px;">Melaksanakan pengabdian kepada masyarakat melalui penerapan ilmu kepelatihan olahraga, sport science, dan teknologi untuk meningkatkan kualitas hidup, kebugaran, dan prestasi olahraga masyarakat.</li>
+                    <li style="margin-bottom: 8px;">Mengembangkan karakter kebangsaan, etika profesi, kepemimpinan, dan kewirausahaan olahraga bagi mahasiswa sebagai bagian dari pembentukan lulusan yang berintegritas dan adaptif.</li>
+                    <li style="margin-bottom: 8px;">Mengembangkan jejaring kerja sama dengan pemerintah, dunia usaha dan dunia industri, organisasi profesi, lembaga pendidikan, serta berbagai pemangku kepentingan di tingkat nasional guna mendukung pelaksanaan tridarma perguruan tinggi dan peningkatan mutu program studi.</li>
                 </ol>
+
+                <h2 style="color: #166534; font-size: 1.6rem; margin-top: 40px; margin-bottom: 15px; border-bottom: 1px solid #e5e7eb; padding-bottom: 10px;">Tujuan Program Studi</h2>
+                <p>Berdasarkan visi dan misi tersebut, Program Studi Pendidikan Kepelatihan Olahraga menetapkan tujuan sebagai berikut:</p>
+                <ol style="margin-top: 10px; margin-left: 20px; list-style-type: decimal;">
+                    <li style="margin-bottom: 8px;">Menghasilkan lulusan yang memiliki kompetensi profesional dalam bidang pendidikan kepelatihan olahraga berbasis sport science dan teknologi.</li>
+                    <li style="margin-bottom: 8px;">Menghasilkan penelitian yang inovatif, berkualitas, dan memberikan kontribusi terhadap pengembangan ilmu kepelatihan olahraga serta peningkatan prestasi olahraga.</li>
+                    <li style="margin-bottom: 8px;">Menghasilkan kegiatan pengabdian kepada masyarakat yang berdampak pada peningkatan kesehatan, kebugaran, kualitas pembinaan, dan prestasi olahraga masyarakat.</li>
+                    <li style="margin-bottom: 8px;">Menghasilkan lulusan yang memiliki karakter kebangsaan, etika profesi, kepemimpinan, kemampuan berpikir kritis, dan jiwa kewirausahaan di bidang olahraga.</li>
+                    <li style="margin-bottom: 8px;">Mewujudkan tata kelola program studi yang efektif, akuntabel, berorientasi pada penjaminan mutu, serta didukung oleh kemitraan strategis untuk meningkatkan kualitas penyelenggaraan tridarma perguruan tinggi.</li>
+                </ol>
+
+                <h2 style="color: #166534; font-size: 1.6rem; margin-top: 40px; margin-bottom: 15px; border-bottom: 1px solid #e5e7eb; padding-bottom: 10px;">Strategi Pencapaian Visi dan Misi</h2>
+                <p>Untuk mencapai visi dan melaksanakan misi tersebut, Program Studi Pendidikan Kepelatihan Olahraga menerapkan strategi pengembangan sebagai berikut:</p>
+                
+                <h3 style="color: #1e40af; font-size: 1.2rem; margin-top: 20px; margin-bottom: 10px;">1. Strategi Penguatan Pendidikan</h3>
+                <ul style="margin-left: 20px; margin-bottom: 15px; list-style-type: disc;">
+                    <li>Mengembangkan kurikulum berbasis Outcome-Based Education (OBE) yang selaras dengan Standar Nasional Pendidikan Tinggi, KKNI, dan kebutuhan dunia kerja.</li>
+                    <li>Mengintegrasikan sport science, teknologi olahraga, dan pembelajaran berbasis proyek dalam proses pendidikan.</li>
+                    <li>Meningkatkan kualitas pembelajaran melalui metode inovatif, digital learning, dan experiential learning.</li>
+                    <li>Memfasilitasi mahasiswa memperoleh sertifikasi kompetensi profesional sesuai bidang kepelatihan olahraga.</li>
+                </ul>
+
+                <h3 style="color: #1e40af; font-size: 1.2rem; margin-top: 20px; margin-bottom: 10px;">2. Strategi Penguatan Penelitian</h3>
+                <ul style="margin-left: 20px; margin-bottom: 15px; list-style-type: disc;">
+                    <li>Mendorong penelitian dosen dan mahasiswa yang berfokus pada sport science, teknologi olahraga, analisis performa atlet, dan inovasi kepelatihan.</li>
+                    <li>Mengembangkan budaya publikasi ilmiah dan hilirisasi hasil penelitian dalam bentuk HKI, produk inovatif, maupun model pembinaan olahraga.</li>
+                    <li>Memperluas kolaborasi penelitian dengan institusi pendidikan, organisasi olahraga, dan mitra industri.</li>
+                </ul>
+
+                <h3 style="color: #1e40af; font-size: 1.2rem; margin-top: 20px; margin-bottom: 10px;">3. Strategi Penguatan Pengabdian kepada Masyarakat</h3>
+                <ul style="margin-left: 20px; margin-bottom: 15px; list-style-type: disc;">
+                    <li>Mengembangkan program pengabdian berbasis hasil penelitian dan kebutuhan masyarakat.</li>
+                    <li>Membangun desa, sekolah, atau klub binaan sebagai laboratorium implementasi ilmu kepelatihan olahraga.</li>
+                    <li>Memberikan layanan edukasi, pelatihan, dan pendampingan kepada masyarakat dalam bidang kesehatan, kebugaran, dan olahraga prestasi.</li>
+                </ul>
+
+                <h3 style="color: #1e40af; font-size: 1.2rem; margin-top: 20px; margin-bottom: 10px;">4. Strategi Pengembangan Karakter dan Kewirausahaan</h3>
+                <ul style="margin-left: 20px; margin-bottom: 15px; list-style-type: disc;">
+                    <li>Menanamkan nilai-nilai kebangsaan, etika profesi, integritas, dan sportivitas dalam seluruh proses pembelajaran.</li>
+                    <li>Mendorong partisipasi mahasiswa dalam kegiatan kepemimpinan, MBKM, organisasi kemahasiswaan, dan kompetisi ilmiah maupun olahraga.</li>
+                    <li>Mengembangkan ekosistem kewirausahaan olahraga melalui mata kuliah, inkubasi bisnis, dan kolaborasi dengan dunia industri.</li>
+                </ul>
+
+                <h3 style="color: #1e40af; font-size: 1.2rem; margin-top: 20px; margin-bottom: 10px;">5. Strategi Penguatan Tata Kelola dan Kemitraan</h3>
+                <ul style="margin-left: 20px; margin-bottom: 15px; list-style-type: disc;">
+                    <li>Meningkatkan sistem penjaminan mutu internal berbasis evaluasi berkelanjutan (continuous quality improvement).</li>
+                    <li>Memperluas kerja sama dengan pemerintah, KONI, cabang olahraga, sekolah, perguruan tinggi, rumah sakit olahraga, pusat kebugaran, dan industri olahraga.</li>
+                    <li>Mengoptimalkan implementasi kerja sama dalam bentuk magang, penelitian bersama, pertukaran narasumber, sertifikasi kompetensi, dan pengembangan kurikulum.</li>
+                </ul>
+
+                <!-- TABEL STRATEGI -->
+                <div style="overflow-x: auto; margin-top: 30px; margin-bottom: 30px;">
+                    <table style="width: 100%; border-collapse: collapse; background-color: #fff; font-size: 0.95rem; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                        <thead>
+                            <tr style="background-color: #166534; color: white; text-align: left;">
+                                <th style="padding: 15px; border: 1px solid #d1d5db; width: 25%;">Bidang Strategis</th>
+                                <th style="padding: 15px; border: 1px solid #d1d5db; width: 25%;">Tujuan Utama</th>
+                                <th style="padding: 15px; border: 1px solid #d1d5db; width: 25%;">Strategi Implementasi</th>
+                                <th style="padding: 15px; border: 1px solid #d1d5db; width: 25%;">Indikator Keberhasilan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="border-bottom: 1px solid #e5e7eb;">
+                                <td style="padding: 15px; border: 1px solid #d1d5db; vertical-align: top;"><strong>1. Penguatan Pendidikan</strong></td>
+                                <td style="padding: 15px; border: 1px solid #d1d5db; vertical-align: top;">Menghasilkan lulusan yang kompeten, adaptif, dan sesuai kebutuhan dunia kerja</td>
+                                <td style="padding: 15px; border: 1px solid #d1d5db; vertical-align: top;">
+                                    <ul style="margin: 0; padding-left: 15px; list-style-type: disc;">
+                                        <li>Mengembangkan kurikulum berbasis Outcome-Based Education (OBE) yang selaras dengan SN-Dikti, KKNI, dan kebutuhan industri.</li>
+                                        <li>Mengintegrasikan sport science, teknologi olahraga, dan pembelajaran berbasis proyek.</li>
+                                        <li>Menerapkan metode pembelajaran inovatif, digital learning, dan experiential learning.</li>
+                                        <li>Memfasilitasi mahasiswa memperoleh sertifikasi kompetensi profesional di bidang kepelatihan olahraga.</li>
+                                    </ul>
+                                </td>
+                                <td style="padding: 15px; border: 1px solid #d1d5db; vertical-align: top;">
+                                    <ul style="margin: 0; padding-left: 15px; list-style-type: disc;">
+                                        <li>Kurikulum OBE terimplementasi.</li>
+                                        <li>Peningkatan penggunaan teknologi dalam pembelajaran.</li>
+                                        <li>Meningkatnya jumlah mahasiswa bersertifikat kompetensi.</li>
+                                        <li>Tingginya tingkat kepuasan pengguna lulusan dan daya saing alumni.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr style="background-color: #f8fafc; border-bottom: 1px solid #e5e7eb;">
+                                <td style="padding: 15px; border: 1px solid #d1d5db; vertical-align: top;"><strong>2. Penguatan Penelitian</strong></td>
+                                <td style="padding: 15px; border: 1px solid #d1d5db; vertical-align: top;">Menghasilkan riset inovatif yang mendukung pengembangan ilmu kepelatihan olahraga</td>
+                                <td style="padding: 15px; border: 1px solid #d1d5db; vertical-align: top;">
+                                    <ul style="margin: 0; padding-left: 15px; list-style-type: disc;">
+                                        <li>Mendorong penelitian dosen dan mahasiswa pada bidang sport science, teknologi olahraga, analisis performa atlet, dan inovasi kepelatihan.</li>
+                                        <li>Mengembangkan budaya publikasi ilmiah dan hilirisasi hasil penelitian menjadi HKI, produk inovatif, atau model pembinaan olahraga.</li>
+                                        <li>Memperluas kolaborasi penelitian dengan perguruan tinggi, organisasi olahraga, dan mitra industri.</li>
+                                    </ul>
+                                </td>
+                                <td style="padding: 15px; border: 1px solid #d1d5db; vertical-align: top;">
+                                    <ul style="margin: 0; padding-left: 15px; list-style-type: disc;">
+                                        <li>Meningkatnya jumlah penelitian dan publikasi ilmiah.</li>
+                                        <li>Bertambahnya HKI atau produk inovasi.</li>
+                                        <li>Terlaksananya penelitian kolaboratif dengan mitra eksternal.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid #e5e7eb;">
+                                <td style="padding: 15px; border: 1px solid #d1d5db; vertical-align: top;"><strong>3. Penguatan Pengabdian kepada Masyarakat</strong></td>
+                                <td style="padding: 15px; border: 1px solid #d1d5db; vertical-align: top;">Meningkatkan kontribusi keilmuan bagi masyarakat dan pembangunan olahraga</td>
+                                <td style="padding: 15px; border: 1px solid #d1d5db; vertical-align: top;">
+                                    <ul style="margin: 0; padding-left: 15px; list-style-type: disc;">
+                                        <li>Mengembangkan program pengabdian berbasis hasil penelitian dan kebutuhan masyarakat.</li>
+                                        <li>Membangun desa, sekolah, atau klub binaan sebagai laboratorium implementasi kepelatihan olahraga.</li>
+                                        <li>Menyelenggarakan edukasi, pelatihan, dan pendampingan di bidang kesehatan, kebugaran, dan olahraga prestasi.</li>
+                                    </ul>
+                                </td>
+                                <td style="padding: 15px; border: 1px solid #d1d5db; vertical-align: top;">
+                                    <ul style="margin: 0; padding-left: 15px; list-style-type: disc;">
+                                        <li>Terbentuknya mitra binaan yang berkelanjutan.</li>
+                                        <li>Meningkatnya jumlah program pengabdian berbasis riset.</li>
+                                        <li>Meningkatnya dampak sosial dan kepuasan masyarakat terhadap program.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr style="background-color: #f8fafc; border-bottom: 1px solid #e5e7eb;">
+                                <td style="padding: 15px; border: 1px solid #d1d5db; vertical-align: top;"><strong>4. Pengembangan Karakter dan Kewirausahaan</strong></td>
+                                <td style="padding: 15px; border: 1px solid #d1d5db; vertical-align: top;">Membentuk lulusan yang berintegritas, berkarakter, dan memiliki jiwa kewirausahaan</td>
+                                <td style="padding: 15px; border: 1px solid #d1d5db; vertical-align: top;">
+                                    <ul style="margin: 0; padding-left: 15px; list-style-type: disc;">
+                                        <li>Menanamkan nilai kebangsaan, etika profesi, integritas, dan sportivitas dalam pembelajaran.</li>
+                                        <li>Mendorong partisipasi mahasiswa dalam MBKM, organisasi kemahasiswaan, kepemimpinan, dan kompetisi ilmiah maupun olahraga.</li>
+                                        <li>Mengembangkan ekosistem kewirausahaan olahraga melalui mata kuliah, inkubasi bisnis, dan kolaborasi industri.</li>
+                                    </ul>
+                                </td>
+                                <td style="padding: 15px; border: 1px solid #d1d5db; vertical-align: top;">
+                                    <ul style="margin: 0; padding-left: 15px; list-style-type: disc;">
+                                        <li>Meningkatnya partisipasi mahasiswa dalam kegiatan kepemimpinan dan MBKM.</li>
+                                        <li>Bertambahnya prestasi mahasiswa.</li>
+                                        <li>Munculnya usaha rintisan (startup) atau bisnis di bidang olahraga yang digagas mahasiswa dan alumni.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px; border: 1px solid #d1d5db; vertical-align: top;"><strong>5. Penguatan Tata Kelola dan Kemitraan</strong></td>
+                                <td style="padding: 15px; border: 1px solid #d1d5db; vertical-align: top;">Mewujudkan tata kelola program studi yang unggul dan kolaboratif</td>
+                                <td style="padding: 15px; border: 1px solid #d1d5db; vertical-align: top;">
+                                    <ul style="margin: 0; padding-left: 15px; list-style-type: disc;">
+                                        <li>Meningkatkan sistem penjaminan mutu internal berbasis continuous quality improvement (CQI).</li>
+                                        <li>Memperluas kerja sama dengan pemerintah, KONI, induk organisasi cabang olahraga, sekolah, perguruan tinggi, rumah sakit olahraga, pusat kebugaran, dan industri olahraga.</li>
+                                        <li>Mengoptimalkan implementasi kerja sama melalui magang, penelitian bersama, pertukaran narasumber, sertifikasi kompetensi, dan pengembangan kurikulum.</li>
+                                    </ul>
+                                </td>
+                                <td style="padding: 15px; border: 1px solid #d1d5db; vertical-align: top;">
+                                    <ul style="margin: 0; padding-left: 15px; list-style-type: disc;">
+                                        <li>Sistem SPMI berjalan efektif dan berkelanjutan.</li>
+                                        <li>Bertambahnya jumlah kerja sama aktif dan implementatif.</li>
+                                        <li>Meningkatnya jumlah mahasiswa yang mengikuti magang, sertifikasi, dan program kolaboratif dengan mitra.</li>
+                                    </ul>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 style="color: #166534; font-size: 1.6rem; margin-top: 40px; margin-bottom: 15px; border-bottom: 1px solid #e5e7eb; padding-bottom: 10px;">Keterkaitan Visi, Misi, Tujuan, dan Strategi</h2>
+                <p>VMTS Program Studi Pendidikan Kepelatihan Olahraga disusun secara terpadu dan saling mendukung. Visi menjadi arah pengembangan jangka panjang, misi menjelaskan ruang lingkup pelaksanaan tridarma, tujuan menerjemahkan hasil yang ingin dicapai, sedangkan strategi menjadi pedoman implementasi yang terukur melalui program kerja, indikator kinerja utama (IKU), dan evaluasi berkala.</p>
+                <p style="margin-top: 15px; margin-bottom: 60px;">Seluruh unsur VMTS menjadi dasar dalam penyusunan profil lulusan, capaian pembelajaran lulusan (CPL), struktur kurikulum, roadmap penelitian, pengabdian kepada masyarakat, kerja sama, serta sistem penjaminan mutu. Dengan demikian, seluruh aktivitas akademik dan nonakademik di Program Studi Pendidikan Kepelatihan Olahraga memiliki arah yang konsisten untuk mendukung terwujudnya lulusan profesional yang unggul, inovatif, berkarakter kebangsaan, dan berjiwa wirausaha berbasis sport science dan teknologi.</p>
             </div>
         </section>
     </main>
-    <script src="script.js?v=4"></script>
+
+    <script src="script.js?v=14"></script>
 </body>
 </html>
