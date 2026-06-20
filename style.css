@@ -43,7 +43,7 @@ a:hover {
     display: block;
 }
 
-/* 2. NAVIGATION BAR */
+/* 2. NAVIGATION BAR (DESKTOP) */
 .main-nav {
     background-color: #facc15; 
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -69,14 +69,11 @@ a:hover {
     color: #000;
 }
 
-/* ================= TAMBAHAN UNTUK DROPDOWN MENU ================= */
-
-/* Membuat parent <li> menjadi titik acuan posisi dropdown */
+/* ================= TAMBAHAN UNTUK DROPDOWN MENU (DESKTOP) ================= */
 .nav-links li.dropdown {
     position: relative;
 }
 
-/* Kotak Dropdown (Sembunyi secara default) */
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -89,12 +86,10 @@ a:hover {
     border-top: 3px solid #166534; 
 }
 
-/* Memunculkan menu saat disorot (hover) */
 .nav-links li.dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* Desain item list di dalam dropdown */
 .dropdown-menu li {
     border-bottom: 1px solid #f3f4f6;
 }
@@ -103,7 +98,6 @@ a:hover {
     border-bottom: none;
 }
 
-/* Teks di dalam dropdown */
 .dropdown-menu li a {
     padding: 12px 20px;
     color: #374151; 
@@ -112,14 +106,12 @@ a:hover {
     font-weight: 500;
 }
 
-/* Efek saat isi dropdown disorot */
 .dropdown-menu li a:hover {
     background-color: #f8fafc;
     color: #166534; 
     padding-left: 25px; 
     transition: all 0.2s ease;
 }
-/* =============================================================== */
 
 /* 3. HERO IMAGE / BANNER BAWAH */
 .hero-section {
@@ -228,41 +220,7 @@ a:hover {
     padding-left: 5px; 
 }
 
-/* RESPONSIVE DESIGN */
-@media (max-width: 600px) {
-    .info-grid {
-        flex-direction: column;
-    }
-    .nav-links {
-        flex-direction: column;
-    }
-    .nav-links li a {
-        text-align: center;
-        border-bottom: 1px solid rgba(0,0,0,0.1);
-    }
-    
-    /* ========================================= */
-    /* PERBAIKAN GAMBAR HEADER & BANNER UNTUK HP */
-    /* ========================================= */
-    
-    .header-image {
-        height: auto; /* Membiarkan tinggi menyesuaikan proporsi asli */
-        max-height: 70px; /* Membatasi agar logo tidak terlalu raksasa di layar kecil */
-        object-fit: contain; /* Memastikan seluruh gambar masuk ke layar */
-        padding: 10px;
-    }
-    
-    .hero-section {
-        height: auto;
-        max-height: none; /* Mencabut batasan tinggi maksimal di HP */
-    }
-    
-    .hero-section img {
-        height: auto; 
-        min-height: auto; /* Menghilangkan paksaan tinggi minimal 250px */
-        object-fit: contain; /* Gambar akan mengecil dan tampil utuh 100% tanpa terpotong */
-    }
-}
+
 /* Styling Kontainer Utama VMTS */
 .vmts-container {
     max-width: 1000px;
@@ -277,13 +235,12 @@ a:hover {
 
 .page-title {
     text-align: center;
-    color: #005a32; /* Warna hijau khas kampus */
+    color: #005a32; 
     margin-bottom: 30px;
-    border-bottom: 2px solid #ffcc00; /* Aksen kuning */
+    border-bottom: 2px solid #ffcc00; 
     padding-bottom: 10px;
 }
 
-/* Styling Tiap Sesi */
 .vmts-section {
     margin-bottom: 40px;
 }
@@ -300,7 +257,6 @@ a:hover {
     font-size: 1.2em;
 }
 
-/* Teks Visi (Blockquote) */
 .visi-text {
     font-size: 1.2em;
     font-weight: bold;
@@ -314,7 +270,6 @@ a:hover {
     border-radius: 4px;
 }
 
-/* List Styling */
 .vmts-section ul, .vmts-section ol {
     margin-left: 20px;
     margin-bottom: 15px;
@@ -324,7 +279,6 @@ a:hover {
     margin-bottom: 8px;
 }
 
-/* Styling Tabel Strategi */
 .table-responsive {
     overflow-x: auto;
     margin-top: 20px;
@@ -359,4 +313,134 @@ a:hover {
 
 .strategi-table li {
     margin-bottom: 5px;
+}
+
+/* ========================================================
+   RESPONSIVE DESIGN (DESAIN KHUSUS HP/MOBILE)
+   MEMASUKKAN HAMBURGER MENU & GAYA NAVIGASI UNSIL
+   ======================================================== */
+
+/* Gaya Tombol Hamburger (Hanya muncul di HP) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #166534; /* Hijau Unsil */
+    width: 45px;
+    height: 45px;
+    border-radius: 5px;
+    margin: 10px 20px;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+    transition: 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .info-grid {
+        flex-direction: column;
+    }
+    
+    /* Perbaikan Header Gambar agar proporsional di HP */
+    .header-image {
+        height: auto; 
+        max-height: 70px; 
+        object-fit: contain; 
+        padding: 10px;
+    }
+    
+    .hero-section {
+        height: auto;
+        max-height: none; 
+    }
+    
+    .hero-section img {
+        height: auto; 
+        min-height: auto; 
+        object-fit: contain; 
+    }
+
+    /* === MEMBUAT MENU SEPERTI WEBSITE UNSIL === */
+    .menu-toggle {
+        display: flex; /* Memunculkan tombol garis tiga */
+    }
+
+    .main-nav {
+        position: relative; /* Agar menu melayang pas di bawah navbar */
+        background-color: transparent; 
+        box-shadow: none;
+    }
+
+    .nav-links {
+        display: none; /* Sembunyikan isi menu secara default */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff; /* Background Putih bersih */
+        flex-direction: column;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+        z-index: 999;
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Class JavaScript untuk memunculkan menu */
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #e5e7eb; /* Garis abu tipis antar menu */
+    }
+
+    .nav-links li a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 20px;
+        color: #4b5563 !important; /* Teks abu-abu gelap */
+        font-weight: 500;
+        text-decoration: none;
+        background-color: #ffffff;
+    }
+
+    .nav-links li a:active {
+        background-color: #f3f4f6;
+    }
+
+    /* Sub-menu Dropdown di HP */
+    .dropdown-menu {
+        display: none !important; 
+        position: static;
+        background-color: #f9fafb; /* Latar submenu sedikit lebih gelap */
+        width: 100%;
+        box-shadow: none;
+        padding-left: 15px; 
+        border-top: none;
+    }
+
+    /* JavaScript Toggle untuk buka submenu */
+    .dropdown.open .dropdown-menu {
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .dropdown > a {
+        position: relative;
+    }
 }
