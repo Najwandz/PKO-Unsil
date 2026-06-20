@@ -21,5 +21,24 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    // Fitur 3: Buka-Tutup Dropdown (Profil / Tri Dharma) dengan Klik di Layar HP
+    const dropdowns = document.querySelectorAll('.dropdown');
+    
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('click', function(e) {
+            // Logika ini hanya berjalan jika ukuran layar di bawah 768px (Mode Mobile)
+            if (window.innerWidth <= 768) {
+                // Jika yang diklik adalah link utama menu dropdown (seperti teks PROFIL ▾)
+                if (e.target.tagName.toLowerCase() === 'a' && e.target.parentElement.classList.contains('dropdown')) {
+                    e.preventDefault(); // Mencegah link langsung melompat/pindah halaman
+                    e.stopPropagation(); // Mencegah konflik event klik lainnya
+                    
+                    // Toggle class 'open' untuk memunculkan/menyembunyikan sub-menu putih
+                    this.classList.toggle('open');
+                }
+            }
+        });
+    });
+
     // Fitur Slider dihapus karena kita menggunakan Banner Statis
 });
