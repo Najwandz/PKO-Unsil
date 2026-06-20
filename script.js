@@ -9,5 +9,17 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
+    // Fitur 2: Hamburger Menu (Buka-Tutup Navigasi Layar HP)
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navMenu = document.getElementById('nav-menu');
+
+    // Validasi pengecekan agar tidak terjadi error jika elemen tidak ditemukan di halaman tertentu
+    if (mobileMenu && navMenu) {
+        mobileMenu.addEventListener('click', function() {
+            // Menambah atau menghapus class 'active' pada menu navigasi (.nav-links)
+            navMenu.classList.toggle('active');
+        });
+    }
+
     // Fitur Slider dihapus karena kita menggunakan Banner Statis
 });
