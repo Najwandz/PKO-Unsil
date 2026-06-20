@@ -19,13 +19,12 @@ a:hover {
     color: #1e40af;
 }
 
-/* 1. HEADER (Menggunakan Gambar) */
+/* 1. HEADER */
 .main-header {
     background-color: #ffffff;
     padding: 0; 
     border-bottom: 2px solid #e5e7eb;
 }
-
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -34,7 +33,6 @@ a:hover {
     align-items: center;
     width: 100%;
 }
-
 .header-image {
     width: 100%; 
     height: 130px; 
@@ -43,7 +41,7 @@ a:hover {
     display: block;
 }
 
-/* 2. NAVIGATION BAR (DESKTOP) */
+/* 2. NAVIGATION BAR */
 .main-nav {
     background-color: #facc15; 
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
@@ -69,405 +67,182 @@ a:hover {
     color: #000;
 }
 
-/* ================= TAMBAHAN UNTUK DROPDOWN MENU (DESKTOP) ================= */
-.nav-links li.dropdown {
-    position: relative;
-}
-
+/* DROPDOWN MENU */
+.nav-links li.dropdown { position: relative; }
 .dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%; 
-    left: 0;
-    background-color: #ffffff; 
-    min-width: 250px; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
-    z-index: 1000; 
+    display: none; position: absolute; top: 100%; left: 0;
+    background-color: #ffffff; min-width: 250px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); z-index: 1000; 
     border-top: 3px solid #166534; 
 }
-
-.nav-links li.dropdown:hover .dropdown-menu {
-    display: block;
-}
-
-.dropdown-menu li {
-    border-bottom: 1px solid #f3f4f6;
-}
-
-.dropdown-menu li:last-child {
-    border-bottom: none;
-}
-
+.nav-links li.dropdown:hover .dropdown-menu { display: block; }
+.dropdown-menu li { border-bottom: 1px solid #f3f4f6; }
+.dropdown-menu li:last-child { border-bottom: none; }
 .dropdown-menu li a {
-    padding: 12px 20px;
-    color: #374151; 
-    text-transform: capitalize; 
-    font-size: 0.95rem;
-    font-weight: 500;
+    padding: 12px 20px; color: #374151; 
+    text-transform: capitalize; font-size: 0.95rem; font-weight: 500;
 }
-
 .dropdown-menu li a:hover {
-    background-color: #f8fafc;
-    color: #166534; 
-    padding-left: 25px; 
-    transition: all 0.2s ease;
+    background-color: #f8fafc; color: #166534; 
+    padding-left: 25px; transition: all 0.2s ease;
 }
 
-/* 3. HERO IMAGE / BANNER BAWAH */
+/* 3. HERO IMAGE */
 .hero-section {
-    width: 100%;
-    max-height: 400px; 
-    overflow: hidden;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-    border-bottom: 4px solid #facc15; 
+    width: 100%; max-height: 400px; overflow: hidden;  
+    display: flex; justify-content: center; align-items: center;
+    background-color: #ffffff; border-bottom: 4px solid #facc15; 
 }
 .hero-section img {
-    width: 100%;
-    height: 100%;
-    min-height: 250px; 
-    object-fit: cover; 
-    object-position: center; 
-    display: block;
+    width: 100%; height: 100%; min-height: 250px; 
+    object-fit: cover; object-position: center; display: block;
 }
 
-/* 4. LAYOUT KONTEN UTAMA & SIDEBAR */
+/* 4. LAYOUT KONTEN UTAMA */
 .content-wrapper {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-    display: flex;
-    gap: 40px;
+    max-width: 1200px; margin: 40px auto; padding: 0 20px;
+    display: flex; gap: 40px;
 }
-
-/* Kiri: Main Content */
 .main-content {
-    flex: 7;
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    flex: 7; background-color: #ffffff; padding: 30px;
+    border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 .section-title {
-    font-size: 2rem;
-    color: #166534;
-    margin-bottom: 30px;
-    border-bottom: 2px solid #facc15;
-    padding-bottom: 10px;
-    display: inline-block;
+    font-size: 2rem; color: #166534; margin-bottom: 30px;
+    border-bottom: 2px solid #facc15; padding-bottom: 10px; display: inline-block;
 }
-
-/* Grid Informasi */
 .info-grid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 30px;
+    display: flex; justify-content: space-between; flex-wrap: wrap;
+    gap: 20px; margin-bottom: 30px;
 }
-.info-item {
-    flex: 1;
-    min-width: 150px;
-}
-.info-item h3 {
-    font-size: 1rem;
-    color: #111827;
-    margin-bottom: 5px;
-}
-.info-item p {
-    font-size: 0.95rem;
-    color: #4b5563;
-}
-
-/* Body Content */
+.info-item { flex: 1; min-width: 150px; }
+.info-item h3 { font-size: 1rem; color: #111827; margin-bottom: 5px; }
+.info-item p { font-size: 0.95rem; color: #4b5563; }
 .content-image {
-    width: 100%;
-    height: auto;
-    border-radius: 6px;
-    margin-bottom: 20px;
+    width: 100%; height: auto; border-radius: 6px; margin-bottom: 20px;
 }
 
-/* Kanan: Sidebar */
-.sidebar {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-}
+/* SIDEBAR */
+.sidebar { flex: 3; display: flex; flex-direction: column; gap: 30px; }
 .sidebar-widget h3 {
-    font-size: 1.1rem;
-    color: #111827;
-    margin-bottom: 15px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid #e5e7eb;
+    font-size: 1.1rem; color: #111827; margin-bottom: 15px;
+    padding-bottom: 8px; border-bottom: 2px solid #e5e7eb;
 }
-.sidebar-list {
-    list-style: none;
-}
-.sidebar-list li {
-    border-bottom: 1px solid #f3f4f6;
-}
-.sidebar-list li a {
-    display: block;
-    padding: 12px 0;
-    color: #374151;
-    font-size: 0.95rem;
-}
-.sidebar-list li a:hover {
-    color: #166534;
-    padding-left: 5px; 
-}
+.sidebar-list { list-style: none; }
+.sidebar-list li { border-bottom: 1px solid #f3f4f6; }
+.sidebar-list li a { display: block; padding: 12px 0; color: #374151; font-size: 0.95rem; }
+.sidebar-list li a:hover { color: #166534; padding-left: 5px; }
 
-
-/* Styling Kontainer Utama VMTS */
-.vmts-container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    line-height: 1.6;
-    color: #333;
+/* =========================================
+   SEKSI BERITA (NEWS GRID)
+========================================= */
+.berita-section {
+    max-width: 1200px; margin: 50px auto 20px; padding: 0 20px;
 }
-
-.page-title {
-    text-align: center;
-    color: #005a32; 
-    margin-bottom: 30px;
-    border-bottom: 2px solid #ffcc00; 
-    padding-bottom: 10px;
+.berita-header { text-align: center; margin-bottom: 40px; }
+.berita-header h2 {
+    color: #1e40af; font-size: 2rem; display: inline-block;
+    border-bottom: 3px solid #facc15; padding-bottom: 5px; text-transform: uppercase;
 }
-
-.vmts-section {
-    margin-bottom: 40px;
+.berita-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;
 }
-
-.vmts-section h2 {
-    color: #005a32;
-    margin-bottom: 15px;
-    font-size: 1.5em;
+.berita-card {
+    background: #fff; border-radius: 8px; overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s ease;
+    border: 1px solid #e5e7eb;
 }
-
-.vmts-section h3 {
-    color: #444;
-    margin-top: 20px;
-    font-size: 1.2em;
+.berita-card:hover {
+    transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1);
 }
-
-.visi-text {
-    font-size: 1.2em;
-    font-weight: bold;
-    font-style: italic;
-    text-align: center;
-    color: #005a32;
-    background-color: #f9f9f9;
-    border-left: 5px solid #ffcc00;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 4px;
+.berita-card img { width: 100%; height: 200px; object-fit: cover; }
+.berita-content { padding: 20px; }
+.berita-title {
+    display: block; font-size: 1.05rem; font-weight: bold; color: #1e40af; 
+    margin-bottom: 10px; line-height: 1.4; text-transform: uppercase;
 }
+.berita-title:hover { color: #166534; text-decoration: underline; }
+.berita-meta { font-size: 0.85rem; color: #6b7280; margin-bottom: 15px; }
+.berita-excerpt { font-size: 0.95rem; color: #4b5563; margin-bottom: 20px; line-height: 1.5; }
+.berita-link { font-size: 0.95rem; color: #1e40af; font-weight: bold; }
+.berita-link:hover { text-decoration: underline; color: #166534; }
 
-.vmts-section ul, .vmts-section ol {
-    margin-left: 20px;
-    margin-bottom: 15px;
+/* =========================================
+   POP-UP PENGUMUMAN
+========================================= */
+.popup-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); display: flex;
+    justify-content: center; align-items: center; z-index: 9999;
+    visibility: hidden; opacity: 0; transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-
-.vmts-section li {
-    margin-bottom: 8px;
+.popup-overlay.show { visibility: visible; opacity: 1; }
+.popup-content {
+    background-color: #fff; width: 90%; max-width: 500px; padding: 30px;
+    border-radius: 10px; position: relative; text-align: center;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px); transition: transform 0.3s ease;
+    border-top: 5px solid #166534;
 }
-
-.table-responsive {
-    overflow-x: auto;
-    margin-top: 20px;
+.popup-overlay.show .popup-content { transform: translateY(0); }
+.popup-close {
+    position: absolute; top: 10px; right: 15px; font-size: 2rem;
+    color: #6b7280; cursor: pointer; transition: color 0.2s; line-height: 1;
 }
-
-.strategi-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.95em;
+.popup-close:hover { color: #dc2626; }
+.popup-btn {
+    display: inline-block; background-color: #166534; color: #fff !important;
+    padding: 12px 25px; border-radius: 5px; text-decoration: none;
+    font-weight: bold; margin-top: 15px; transition: background-color 0.2s;
 }
-
-.strategi-table th, .strategi-table td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    vertical-align: top;
-}
-
-.strategi-table th {
-    background-color: #005a32;
-    color: #ffffff;
-    text-align: left;
-}
-
-.strategi-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.strategi-table ul {
-    margin-left: 15px;
-    padding-left: 0;
-}
-
-.strategi-table li {
-    margin-bottom: 5px;
-}
+.popup-btn:hover { background-color: #14532d; }
 
 /* ========================================================
-   RESPONSIVE DESIGN (DESAIN KHUSUS HP/MOBILE)
-   MEMASUKKAN HAMBURGER MENU & MENGHAPUS SPACE
-   ======================================================== */
-
-/* Gaya Default Tombol Hamburger (Disembunyikan di Laptop) */
+   RESPONSIVE DESIGN (HP) & HAMBURGER MENU
+======================================================== */
 .menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    padding: 10px;
-    background-color: #166534; /* Hijau Unsil */
-    width: 45px;
-    height: 45px;
-    border-radius: 5px;
+    display: none; flex-direction: column; justify-content: center;
+    align-items: center; cursor: pointer; padding: 10px;
+    background-color: #166534; width: 45px; height: 45px; border-radius: 5px;
 }
-
 .menu-toggle .bar {
-    height: 3px;
-    width: 25px;
-    background-color: white;
-    margin: 3px 0;
-    transition: 0.3s ease;
+    height: 3px; width: 25px; background-color: white; margin: 3px 0; transition: 0.3s ease;
 }
 
 @media (max-width: 768px) {
-    .content-wrapper {
-        flex-direction: column;
-        gap: 20px;
-    }
+    .content-wrapper { flex-direction: column; gap: 20px; }
+    .info-grid { flex-direction: column; }
     
-    .info-grid {
-        flex-direction: column;
-    }
+    /* Berita Responsif */
+    .berita-grid { grid-template-columns: 1fr; }
     
-    /* GABUNGKAN HEADER & MENU DI HP */
-    .main-header {
-        position: relative; /* Menjadi acuan koordinat tombol */
-        border-bottom: none; /* Hilangkan garis bawah agar menyatu */
-        background-color: #ffffff;
-        z-index: 998;
-    }
+    .main-header { position: relative; border-bottom: none; background-color: #ffffff; z-index: 998; }
+    .header-container { display: flex; justify-content: flex-end; align-items: center; min-height: 70px; }
+    .header-image { height: auto; max-height: 55px; padding: 5px 15px 5px 70px; }
+    .hero-section { height: auto; max-height: none; }
+    .hero-section img { height: auto; min-height: auto; object-fit: contain; }
 
-    .header-container {
-        display: flex;
-        justify-content: flex-end; /* Geser gambar ke kanan agar tidak menabrak tombol */
-        align-items: center;
-        min-height: 70px; /* Tinggi pasti area putih */
-    }
-
-    .header-image {
-        height: auto; 
-        max-height: 55px; /* Perkecil sedikit agar proporsional sejajar tombol */
-        object-fit: contain; 
-        /* Beri jarak kiri 70px agar tulisan PKO tidak tertutup tombol Hamburger */
-        padding: 5px 15px 5px 70px; 
-    }
+    .main-nav { position: absolute; top: 0; left: 0; width: 100%; height: 0; background-color: transparent; box-shadow: none; }
+    .menu-toggle { display: flex; position: absolute; top: 12px; left: 15px; margin: 0; z-index: 1000; pointer-events: auto; }
     
-    .hero-section {
-        height: auto;
-        max-height: none; 
-    }
-    
-    .hero-section img {
-        height: auto; 
-        min-height: auto; 
-        object-fit: contain; 
-    }
-
-    /* === NAVIGASI MOBILE === */
-    .main-nav {
-        /* Buat melayang (absolute) agar TIDAK ADA SPACE di bawah banner putih */
-        position: absolute; 
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 0; /* Tinggi nol agar tidak menutupi klik layar */
-        background-color: transparent; 
-        box-shadow: none;
-    }
-
-    /* Posisikan tombol sejajar ke dalam area banner putih */
-    .menu-toggle {
-        display: flex;
-        position: absolute; 
-        top: 12px; /* Jarak dari atas (sejajar gambar) */
-        left: 15px; /* Jarak dari sisi kiri layar */
-        margin: 0;
-        z-index: 1000; 
-        pointer-events: auto; /* Pastikan bisa diklik */
-    }
-
-    /* Rombak Dropdown Menu */
     .nav-links {
-        display: none; 
-        position: absolute;
-        top: 70px; /* Muncul TEPAT DI BAWAH area putih banner (70px) */
-        left: 0;
-        width: 100%;
-        background-color: #ffffff; 
-        flex-direction: column;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
-        z-index: 999;
-        padding: 0;
-        margin: 0;
+        display: none; position: absolute; top: 70px; left: 0; width: 100%;
+        background-color: #ffffff; flex-direction: column; box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+        z-index: 999; padding: 0; margin: 0;
     }
-
-    /* Class JavaScript untuk memunculkan menu */
-    .nav-links.active {
-        display: flex;
-    }
-
-    .nav-links li {
-        width: 100%;
-        text-align: left;
-        border-bottom: 1px solid #e5e7eb; 
-    }
-
+    .nav-links.active { display: flex; }
+    .nav-links li { width: 100%; text-align: left; border-bottom: 1px solid #e5e7eb; }
     .nav-links li a {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 15px 20px;
-        color: #4b5563 !important; 
-        font-weight: 500;
-        text-decoration: none;
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 15px 20px; color: #4b5563 !important; font-weight: 500;
         background-color: #ffffff;
     }
+    .nav-links li a:active { background-color: #f3f4f6; }
+    
+    .dropdown-menu { display: none !important; position: static; background-color: #f9fafb; width: 100%; box-shadow: none; padding-left: 15px; border-top: none; }
+    .dropdown.open .dropdown-menu { display: flex !important; flex-direction: column; }
+}
 
-    .nav-links li a:active {
-        background-color: #f3f4f6;
-    }
-
-    /* Sub-menu Dropdown di HP */
-    .dropdown-menu {
-        display: none !important; 
-        position: static;
-        background-color: #f9fafb; 
-        width: 100%;
-        box-shadow: none;
-        padding-left: 15px; 
-        border-top: none;
-    }
-
-    /* JavaScript Toggle untuk buka submenu */
-    .dropdown.open .dropdown-menu {
-        display: flex !important;
-        flex-direction: column;
-    }
-
-    .dropdown > a {
-        position: relative;
-    }
+@media (min-width: 769px) and (max-width: 1024px) {
+    .berita-grid { grid-template-columns: repeat(2, 1fr); }
 }
