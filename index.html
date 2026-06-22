@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Program Studi Pendidikan Kepelatihan Olahraga - Universitas Siliwangi</title>
-    <link rel="stylesheet" href="style.css?v=16">
+    <!-- Versi dinaikkan ke v=19 agar memuat desain terbaru -->
+    <link rel="stylesheet" href="style.css?v=19">
     <link rel="icon" href="Logo-unsil1.jpg" type="image/jpg">
 </head>
 <body>
@@ -55,26 +56,47 @@
 
     <section class="berita-section" style="margin-bottom: 80px;">
         <div class="berita-header">
-            <h2>BERITA TERKINI</h2>
+            <h2>BERITA TERKINI & INFORMASI</h2>
         </div>
         
-        <div class="berita-grid" style="display: flex; justify-content: center;">
+        <!-- Menggunakan flex-wrap dan gap agar kotak berjajar rapi dan turun ke bawah di HP -->
+        <div class="berita-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px;">
             
+            <!-- KOTAK 1: VIDEO SAMBUTAN & PROMOSI PKO -->
             <div class="berita-card" style="max-width: 400px; width: 100%;">
+                <!-- Video Player -->
+                <video width="100%" controls style="border-bottom: 1px solid #f3f4f6; max-height: 225px; object-fit: cover; background: #000; display: block;">
+                    <source src="Sambutan-wakil-rektor.mp4" type="video/mp4">
+                    Maaf, browser Anda tidak mendukung pemutaran video ini.
+                </video>
                 
+                <div class="berita-content">
+                    <span class="berita-title" style="color: #166534;">MARI BERGABUNG BERSAMA PRODI PKO UNIVERSITAS SILIWANGI!</span>
+                    <p class="berita-meta">Sambutan & Penerimaan Mahasiswa Baru</p>
+                    <p class="berita-excerpt">
+                        Wujudkan impianmu menjadi pelatih, pendidik, dan wirausahawan olahraga profesional! Program Studi Pendidikan Kepelatihan Olahraga (PKO) Universitas Siliwangi kini membuka pendaftaran untuk calon mahasiswa baru. Kembangkan potensimu melalui pendekatan <em>sport science</em> dan fasilitas modern kami. <strong>Jadilah bagian dari generasi juara!</strong>
+                    </p>
+                    <a href="https://pmb.unsil.ac.id/" target="_blank" class="berita-link" style="display: inline-block; background-color: #facc15; color: #111827; padding: 10px 15px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 10px; transition: background-color 0.2s;">
+                        Daftar Sekarang &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <!-- KOTAK 2: BERITA SELEKSI MANDIRI -->
+            <div class="berita-card" style="max-width: 400px; width: 100%;">
                 <img src="Pengumuman-Seleksi-Mandiri-Unsil.jpg" alt="Seleksi Mandiri Unsil">
                 
                 <div class="berita-content">
                     <a href="https://unsil.ac.id/2026/06/15/pengumuman-penerimaan-mahasiswa-baru-jalur-seleksi-mandiri-universitas-siliwangi-tahun-2026/" target="_blank" class="berita-title">PENGUMUMAN PENERIMAAN MAHASISWA BARU JALUR SELEKSI MANDIRI UNIVERSITAS SILIWANGI TAHUN 2026</a>
                     <p class="berita-meta">Post date: 15/06/2026 - 10:00 WIB</p>
-                    <p class="berita-excerpt">Pengumuman resmi mengenai hasil penerimaan mahasiswa baru Universitas Siliwangi melalui jalur Seleksi Mandiri tahun akademik 2026/2027 telah dirilis.</p>
-                    <a href="https://unsil.ac.id/2026/06/15/pengumuman-penerimaan-mahasiswa-baru-jalur-seleksi-mandiri-universitas-siliwangi-tahun-2026/" target="_blank" class="berita-link">Selengkapnya &rarr;</a>
+                    <p class="berita-excerpt">Pengumuman resmi mengenai hasil penerimaan mahasiswa baru Universitas Siliwangi melalui jalur Seleksi Mandiri tahun akademik 2026/2027 telah dirilis. Silakan periksa hasil kelulusan Anda melalui tautan di bawah ini.</p>
+                    <a href="https://unsil.ac.id/2026/06/15/pengumuman-penerimaan-mahasiswa-baru-jalur-seleksi-mandiri-universitas-siliwangi-tahun-2026/" target="_blank" class="berita-link" style="display: inline-block; margin-top: 10px;">Selengkapnya &rarr;</a>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <script src="script.js?v=16"></script>
+    <script src="script.js?v=19"></script>
 </body>
 </html>
