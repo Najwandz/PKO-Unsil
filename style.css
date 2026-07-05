@@ -9,11 +9,11 @@ html, body {
     background-color: #f9fafb;
     color: #333;
     line-height: 1.6;
-    overflow-x: hidden; /* MENGUNCI LAYAR AGAR TIDAK BISA DIGESER KE KANAN/KIRI */
+    overflow-x: hidden; 
     width: 100%;
 }
 a {
-    text-decoration: none;
+    text-decoration: none; /* Mengembalikan agar link tidak bergaris bawah biru */
     color: #2563eb;
     transition: color 0.2s ease;
 }
@@ -26,6 +26,8 @@ a:hover {
     background-color: #ffffff;
     padding: 0; 
     border-bottom: 2px solid #e5e7eb;
+    position: relative;
+    z-index: 10; /* Menjaga header di bawah menu dropdown */
 }
 .header-container {
     max-width: 1200px;
@@ -47,6 +49,9 @@ a:hover {
 .main-nav {
     background-color: #facc15; 
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 9999; /* Memastikan menu selalu bisa diklik */
+    width: 100%;
 }
 .nav-links {
     max-width: 1200px;
@@ -63,6 +68,7 @@ a:hover {
     font-weight: 600;
     font-size: 0.9rem;
     text-transform: uppercase;
+    cursor: pointer;
 }
 .nav-links li a:hover {
     background-color: rgba(0, 0, 0, 0.05);
@@ -72,21 +78,31 @@ a:hover {
 /* DROPDOWN MENU */
 .nav-links li.dropdown { position: relative; }
 .dropdown-menu {
-    display: none; position: absolute; top: 100%; left: 0;
-    background-color: #ffffff; min-width: 250px; 
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15); z-index: 1000; 
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    left: 0;
+    background-color: #ffffff; 
+    min-width: 250px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
+    z-index: 10000; /* Dropdown tampil paling atas */
     border-top: 3px solid #166534; 
 }
 .nav-links li.dropdown:hover .dropdown-menu { display: block; }
 .dropdown-menu li { border-bottom: 1px solid #f3f4f6; }
 .dropdown-menu li:last-child { border-bottom: none; }
 .dropdown-menu li a {
-    padding: 12px 20px; color: #374151; 
-    text-transform: capitalize; font-size: 0.95rem; font-weight: 500;
+    padding: 12px 20px; 
+    color: #374151; 
+    text-transform: capitalize; 
+    font-size: 0.95rem; 
+    font-weight: 500;
 }
 .dropdown-menu li a:hover {
-    background-color: #f8fafc; color: #166534; 
-    padding-left: 25px; transition: all 0.2s ease;
+    background-color: #f8fafc; 
+    color: #166534; 
+    padding-left: 25px; 
+    transition: all 0.2s ease;
 }
 
 /* 3. HERO IMAGE */
@@ -94,13 +110,15 @@ a:hover {
     width: 100%; max-height: 400px; overflow: hidden;  
     display: flex; justify-content: center; align-items: center;
     background-color: #ffffff; border-bottom: 4px solid #facc15; 
+    position: relative;
+    z-index: 1;
 }
 .hero-section img {
     width: 100%; height: 100%; min-height: 250px; 
     object-fit: cover; object-position: center; display: block;
 }
 
-/* 4. LAYOUT KONTEN UTAMA (Digunakan di Halaman Tentang Prodi, Sejarah, dll) */
+/* 4. LAYOUT KONTEN UTAMA */
 .content-wrapper {
     max-width: 1200px; margin: 40px auto; padding: 0 20px;
     display: flex; gap: 40px;
@@ -109,7 +127,7 @@ a:hover {
 .main-content {
     flex: 7; background-color: #ffffff; padding: 30px;
     border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    max-width: 100%; /* Memastikan konten tidak melebihi layar */
+    max-width: 100%; 
     overflow: hidden;
 }
 .section-title {
@@ -124,7 +142,7 @@ a:hover {
 .info-item h3 { font-size: 1rem; color: #111827; margin-bottom: 5px; }
 .info-item p { 
     font-size: 0.95rem; color: #4b5563; 
-    word-wrap: break-word; /* Memaksa teks panjang seperti link turun ke bawah */
+    word-wrap: break-word; 
     overflow-wrap: break-word;
 }
 .content-image {
@@ -143,7 +161,7 @@ a:hover {
 .sidebar-list li a:hover { color: #166534; padding-left: 5px; }
 
 /* =========================================
-   SEKSI BERITA (DIPERBARUI AGAR 1 KOTAK RAPI DI TENGAH)
+   SEKSI BERITA (SAMA SEPERTI ASLI ANDA)
 ========================================= */
 .berita-section {
     max-width: 1200px; margin: 50px auto 80px; padding: 0 20px;
@@ -153,8 +171,6 @@ a:hover {
     color: #1e40af; font-size: 2rem; display: inline-block;
     border-bottom: 3px solid #facc15; padding-bottom: 5px; text-transform: uppercase;
 }
-
-/* Mengubah Grid menjadi Flexbox Center agar otomatis ke tengah jika cuma 1 berita */
 .berita-grid {
     display: flex; justify-content: center; flex-wrap: wrap; gap: 30px;
 }
@@ -162,7 +178,7 @@ a:hover {
     background: #fff; border-radius: 8px; overflow: hidden;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: transform 0.3s ease;
     border: 1px solid #e5e7eb;
-    max-width: 400px; width: 100%; /* Menahan agar kotak tidak melebar seukuran layar */
+    max-width: 400px; width: 100%; 
 }
 .berita-card:hover {
     transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1);
@@ -179,35 +195,12 @@ a:hover {
 .berita-link { font-size: 0.95rem; color: #1e40af; font-weight: bold; }
 .berita-link:hover { text-decoration: underline; color: #166534; }
 
-/* =========================================
-   GAYA VMTS
-========================================= */
-.vmts-container {
-    max-width: 1000px; margin: 40px auto; padding: 20px;
-    background-color: #ffffff; box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px; line-height: 1.6; color: #333;
-}
-.page-title {
-    text-align: center; color: #005a32; margin-bottom: 30px;
-    border-bottom: 2px solid #ffcc00; padding-bottom: 10px;
-}
-.vmts-section { margin-bottom: 40px; }
-.vmts-section h2 { color: #005a32; margin-bottom: 15px; font-size: 1.5em; }
-.vmts-section h3 { color: #444; margin-top: 20px; font-size: 1.2em; }
-.visi-text {
-    font-size: 1.2em; font-weight: bold; font-style: italic; text-align: center;
-    color: #005a32; background-color: #f9f9f9; border-left: 5px solid #ffcc00;
-    padding: 20px; margin: 20px 0; border-radius: 4px;
-}
-.vmts-section ul, .vmts-section ol { margin-left: 20px; margin-bottom: 15px; }
-.vmts-section li { margin-bottom: 8px; }
-.table-responsive { overflow-x: auto; margin-top: 20px; }
-.strategi-table { width: 100%; border-collapse: collapse; font-size: 0.95em; }
-.strategi-table th, .strategi-table td { border: 1px solid #ddd; padding: 12px; vertical-align: top; }
-.strategi-table th { background-color: #005a32; color: #ffffff; text-align: left; }
-.strategi-table tr:nth-child(even) { background-color: #f2f2f2; }
-.strategi-table ul { margin-left: 15px; padding-left: 0; }
-.strategi-table li { margin-bottom: 5px; }
+/* GAYA TABEL VMTS & KURIKULUM */
+.table-responsive { overflow-x: auto; margin-top: 20px; margin-bottom: 30px; }
+.vmts-table { width: 100%; border-collapse: collapse; background-color: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.vmts-table th { padding: 12px; border: 1px solid #d1d5db; background-color: #166534; color: white; text-align: left; }
+.vmts-table td { padding: 12px; border: 1px solid #d1d5db; vertical-align: top; color: #4b5563; font-size: 0.95rem; }
+.vmts-table tr:nth-child(even) { background-color: #f8fafc; }
 
 /* ========================================================
    RESPONSIVE DESIGN (HP) & HAMBURGER MENU
@@ -231,13 +224,14 @@ a:hover {
     .hero-section { height: auto; max-height: none; }
     .hero-section img { height: auto; min-height: auto; object-fit: contain; }
 
-    .main-nav { position: absolute; top: 0; left: 0; width: 100%; height: 0; background-color: transparent; box-shadow: none; }
-    .menu-toggle { display: flex; position: absolute; top: 12px; left: 15px; margin: 0; z-index: 1000; pointer-events: auto; }
+    /* Navigasi Mobile */
+    .main-nav { position: absolute; top: 0; left: 0; width: 100%; height: 0; background-color: transparent; box-shadow: none; z-index: 9999;}
+    .menu-toggle { display: flex; position: absolute; top: 12px; left: 15px; margin: 0; z-index: 10000; pointer-events: auto; }
     
     .nav-links {
         display: none; position: absolute; top: 70px; left: 0; width: 100%;
         background-color: #ffffff; flex-direction: column; box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
-        z-index: 999; padding: 0; margin: 0;
+        z-index: 9999; padding: 0; margin: 0;
     }
     .nav-links.active { display: flex; }
     .nav-links li { width: 100%; text-align: left; border-bottom: 1px solid #e5e7eb; }
