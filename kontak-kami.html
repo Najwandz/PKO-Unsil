@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontak Kami - Program Studi PKO Universitas Siliwangi</title>
-    <link rel="stylesheet" href="style.css?v=16">
+    <!-- Update versi ke 21 agar sinkron dengan file lain -->
+    <link rel="stylesheet" href="style.css?v=21">
     <link rel="icon" href="Logo-unsil1.jpg" type="image/jpg">
     <style>
         .contact-item-link { display: flex; align-items: center; text-decoration: none; color: inherit; transition: transform 0.2s; }
@@ -28,39 +29,54 @@
             <img src="Banner-PKO.jpg" alt="Header PKO Unsil" class="header-image">
         </div>
     </header>
+    
+    <!-- Navigasi yang Sudah Diperbaiki (Bisa Klik Kurikulum) -->
     <nav class="main-nav">
         <div class="menu-toggle" id="mobile-menu">
-            <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
         <ul class="nav-links" id="nav-menu">
             <li><a href="index.html">BERANDA</a></li>
-            <li class="dropdown"><a href="#profil">PROFIL ▾</a>
+            <li class="dropdown">
+                <a href="#">PROFIL ▾</a>
                 <ul class="dropdown-menu">
                     <li><a href="tentang-prodi.html">Tentang Prodi</a></li>
                     <li><a href="sejarah-prodi.html">Sejarah Prodi</a></li>
                     <li><a href="vmts-prodi.html">VMTS Prodi</a></li>
                     <li><a href="struktur-organisasi.html">Struktur Organisasi Prodi</a></li>
-                    <li><a href="#dosen.html">Dosen</a></li>
+                    <li><a href="#">Dosen</a></li>
                 </ul>
             </li>
-            <li><a href="#">AKADEMIK</a></li><li><a href="#">KURIKULUM</a></li><li><a href="#">GALERI</a></li><li><a href="#">ALUMNI</a></li>
-            <li class="dropdown"><a href="#tridharma">TRI DHARMA ▾</a>
+            <li><a href="#">AKADEMIK</a></li>
+            <li><a href="kurikulum.html">KURIKULUM</a></li>
+            <li><a href="#">GALERI</a></li>
+            <li><a href="#">ALUMNI</a></li>
+            <li class="dropdown">
+                <a href="#">TRI DHARMA ▾</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Pendidikan/Pengajaran</a></li><li><a href="#">Penelitian</a></li><li><a href="#">Pengabdian</a></li>
+                    <li><a href="#">Pendidikan/Pengajaran</a></li>
+                    <li><a href="#">Penelitian</a></li>
+                    <li><a href="#">Pengabdian</a></li>
                 </ul>
             </li>
-            <li><a href="kontak-kami.html">KONTAK KAMI</a></li>
+            <!-- Highlight menu Kontak Kami yang sedang aktif -->
+            <li><a href="kontak-kami.html" style="background-color: rgba(0,0,0,0.05);">KONTAK KAMI</a></li>
         </ul>
     </nav>
+    
     <section class="hero-section">
         <img id="heroImage" src="Header-PKO.jpg" alt="Header Utama Prodi PKO Unsil">
     </section>
+
     <main class="content-wrapper" style="margin-top: 40px; max-width: 1200px; margin-left: auto; margin-right: auto; padding: 0 20px;">
         <section class="main-content" style="flex: 1;"> 
             <div class="page-header" style="text-align: center; margin-bottom: 40px;">
                 <h1 style="color: #166534; font-size: 2.2rem; margin-bottom: 10px;">Kontak Kami</h1>
                 <hr style="width: 100px; border: 2px solid #facc15; margin: 0 auto;">
             </div>
+            
             <div class="contact-content" style="text-align: justify; color: #4b5563; font-size: 1.05rem; line-height: 1.8;">
                 <p style="margin-bottom: 30px;">Jika Anda memiliki pertanyaan seputar Program Studi Pendidikan Kepelatihan Olahraga (PKO) Universitas Siliwangi, jangan ragu untuk menghubungi kami melalui saluran di bawah ini.</p>
                 <div class="contact-info" style="background-color: #f8fafc; padding: 30px; border-left: 5px solid #facc15; border-radius: 5px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 50px;">
@@ -88,6 +104,8 @@
             </div>
         </section>
     </main>
-    <script src="script.js?v=16"></script>
+
+    <!-- Update versi script ke 21 -->
+    <script src="script.js?v=21"></script>
 </body>
 </html>
