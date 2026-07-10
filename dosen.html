@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dosen Prodi PKO - Universitas Siliwangi</title>
+    <!-- Versi dinaikkan ke v=26 untuk memastikan pembaruan dimuat -->
+    <link rel="stylesheet" href="style.css?v=26">
+    <link rel="icon" href="Logo-unsil1.jpg" type="image/jpg">
+    
+    <!-- CSS KHUSUS HALAMAN DOSEN (Disematkan di sini agar dijamin terbaca oleh browser) -->
+    <style>
+        .dosen-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .dosen-card {
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #e5e7eb;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .dosen-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            border-color: #facc15;
+        }
+        .dosen-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 15px;
+            border: 4px solid #facc15;
+            background-color: #f3f4f6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .dosen-name {
+            font-size: 1.15rem;
+            color: #166534;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        .dosen-meta {
+            font-size: 0.95rem;
+            color: #4b5563;
+            margin-bottom: 20px;
+        }
+        .dosen-meta strong {
+            color: #111827;
+        }
+        .dosen-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-top: auto; /* Memaksa tombol untuk selalu berada di bawah card */
+        }
+        .btn-sinta, .btn-gs {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .btn-sinta {
+            background-color: #f8fafc;
+            color: #1e40af;
+            border: 1px solid #d1d5db;
+        }
+        .btn-sinta:hover {
+            background-color: #e5e7eb;
+            color: #1e3a8a;
+            border-color: #9ca3af;
+        }
+        .btn-gs {
+            background-color: #1e40af;
+            color: #ffffff !important;
+            border: 1px solid #1e40af;
+        }
+        .btn-gs:hover {
+            background-color: #1e3a8a;
+            border-color: #1e3a8a;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="header-container">
+            <img src="Banner-PKO.jpg" alt="Header PKO Unsil" class="header-image">
+        </div>
+    </header>
+    
+    <nav class="main-nav">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-links" id="nav-menu">
+            <li><a href="index.html">BERANDA</a></li>
+            <li class="dropdown">
+                <a href="#">PROFIL ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="tentang-prodi.html">Tentang Prodi</a></li>
+                    <li><a href="sejarah-prodi.html">Sejarah Prodi</a></li>
+                    <li><a href="vmts-prodi.html">VMTS Prodi</a></li>
+                    <li><a href="struktur-organisasi.html">Struktur Organisasi Prodi</a></li>
+                    <li><a href="dosen.html" style="background-color: #f8fafc; color: #166534;">Dosen</a></li>
+                </ul>
+            </li>
+            <li><a href="#">AKADEMIK</a></li>
+            <li><a href="kurikulum.html">KURIKULUM</a></li>
+            <li><a href="#">GALERI</a></li>
+            <li><a href="#">ALUMNI</a></li>
+            <li class="dropdown">
+                <a href="#">TRI DHARMA ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Pendidikan/Pengajaran</a></li>
+                    <li><a href="#">Penelitian</a></li>
+                    <li><a href="#">Pengabdian</a></li>
+                </ul>
+            </li>
+            <li><a href="kontak-kami.html">KONTAK KAMI</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero-section">
+        <img id="heroImage" src="Header-PKO.jpg" alt="Banner Utama Prodi PKO Unsil">
+    </section>
+
+    <main class="content-wrapper" style="margin-top: 40px; max-width: 1200px; margin-left: auto; margin-right: auto; padding: 0 20px;">
+        <section class="main-content" style="flex: 1;"> 
+            <div class="page-header" style="text-align: center; margin-bottom: 40px;">
+                <h1 style="color: #166534; font-size: 2.2rem; margin-bottom: 10px;">Dosen Program Studi</h1>
+                <hr style="width: 100px; border: 2px solid #facc15; margin: 0 auto;">
+            </div>
+
+            <div class="dosen-grid">
+                <!-- DOSEN 1 -->
+                <div class="dosen-card">
+                    <!-- Pastikan file gambar dosen-iis.jpg dll sudah ada di folder yang sama -->
+                    <img src="dosen-iis.jpg" alt="Prof. Dr. H. Iis Marwan" class="dosen-img">
+                    <h3 class="dosen-name">Prof. Dr. H. Iis Marwan, Drs., M.Pd.</h3>
+                    <p class="dosen-meta"><strong>SINTA ID:</strong> 5985238</p>
+                    <div class="dosen-links">
+                        <a href="https://sinta.kemdikbud.go.id/authors/profile/5985238" target="_blank" class="btn-sinta">SINTA Profile</a>
+                        <a href="https://scholar.google.com/citations?user=wtVs5uAAAAAJ&hl=en&oi=ao" target="_blank" class="btn-gs">Google Scholar</a>
+                    </div>
+                </div>
+
+                <!-- DOSEN 2 -->
+                <div class="dosen-card">
+                    <img src="dosen-fegie.jpg" alt="Dr. Fegie Rizkia Mulyana" class="dosen-img">
+                    <h3 class="dosen-name">Dr. Fegie Rizkia Mulyana, M.Pd., CHt., CNLPC.</h3>
+                    <p class="dosen-meta"><strong>SINTA ID:</strong> 6011387</p>
+                    <div class="dosen-links">
+                        <a href="https://sinta.kemdikbud.go.id/authors/profile/6011387" target="_blank" class="btn-sinta">SINTA Profile</a>
+                        <a href="https://scholar.google.com/citations?user=6OTibTEAAAAJ&hl=en&oi=ao" target="_blank" class="btn-gs">Google Scholar</a>
+                    </div>
+                </div>
+
+                <!-- DOSEN 3 -->
+                <div class="dosen-card">
+                    <img src="dosen-nanang.jpg" alt="Dr. Nanang Kusnadi" class="dosen-img">
+                    <h3 class="dosen-name">Dr. Nanang Kusnadi, S.Pd., M.Pd., AIFO.</h3>
+                    <p class="dosen-meta"><strong>SINTA ID:</strong> 6108026</p>
+                    <div class="dosen-links">
+                        <a href="https://sinta.kemdikbud.go.id/authors/profile/6108026" target="_blank" class="btn-sinta">SINTA Profile</a>
+                        <a href="https://scholar.google.com/citations?user=GVedPRcAAAAJ&hl=en&oi=ao" target="_blank" class="btn-gs">Google Scholar</a>
+                    </div>
+                </div>
+
+                <!-- DOSEN 4 -->
+                <div class="dosen-card">
+                    <img src="dosen-aang.jpg" alt="Dr. Aang Rohyana" class="dosen-img">
+                    <h3 class="dosen-name">Dr. Aang Rohyana, M.Pd., CHt., CNLPC.</h3>
+                    <p class="dosen-meta"><strong>SINTA ID:</strong> 6011646</p>
+                    <div class="dosen-links">
+                        <a href="https://sinta.kemdikbud.go.id/authors/profile/6011646" target="_blank" class="btn-sinta">SINTA Profile</a>
+                        <a href="https://scholar.google.com/citations?user=odgVJU8AAAAJ&hl=en&oi=ao" target="_blank" class="btn-gs">Google Scholar</a>
+                    </div>
+                </div>
+
+                <!-- DOSEN 5 -->
+                <div class="dosen-card">
+                    <img src="dosen-pepep.jpg" alt="Dr. Pepep Moch. Syafei" class="dosen-img">
+                    <h3 class="dosen-name">Dr. Pepep Moch. Syafei, M.Pd.</h3>
+                    <p class="dosen-meta"><strong>SINTA ID:</strong> 6764381</p>
+                    <div class="dosen-links">
+                        <a href="https://sinta.kemdikbud.go.id/authors/profile/6764381" target="_blank" class="btn-sinta">SINTA Profile</a>
+                        <a href="https://scholar.google.com/citations?user=RnWLd4oAAAAJ&hl=en&oi=ao" target="_blank" class="btn-gs">Google Scholar</a>
+                    </div>
+                </div>
+
+                <!-- DOSEN 6 -->
+                <div class="dosen-card">
+                    <img src="dosen-agus.jpg" alt="Agus Arief Rahmat" class="dosen-img">
+                    <h3 class="dosen-name">Agus Arief Rahmat, M.Pd.</h3>
+                    <p class="dosen-meta"><strong>SINTA ID:</strong> 6017417</p>
+                    <div class="dosen-links">
+                        <a href="https://sinta.kemdikbud.go.id/authors/profile/6017417" target="_blank" class="btn-sinta">SINTA Profile</a>
+                        <a href="https://scholar.google.com/citations?user=JK8WBbgAAAAJ&hl=en&oi=ao" target="_blank" class="btn-gs">Google Scholar</a>
+                    </div>
+                </div>
+
+                <!-- DOSEN 7 -->
+                <div class="dosen-card">
+                    <img src="dosen-haikal.jpg" alt="Haikal Millah" class="dosen-img">
+                    <h3 class="dosen-name">Haikal Millah, M.Pd.</h3>
+                    <p class="dosen-meta"><strong>SINTA ID:</strong> 6011377</p>
+                    <div class="dosen-links">
+                        <a href="https://sinta.kemdikbud.go.id/authors/profile/6011377" target="_blank" class="btn-sinta">SINTA Profile</a>
+                        <a href="https://scholar.google.com/citations?user=RJSFV64AAAAJ&hl=en&oi=ao" target="_blank" class="btn-gs">Google Scholar</a>
+                    </div>
+                </div>
+
+                <!-- DOSEN 8 -->
+                <div class="dosen-card">
+                    <img src="dosen-fariha.jpg" alt="Fariha Nilan" class="dosen-img">
+                    <h3 class="dosen-name">Fariha Nilan, S.Or., M.Pd.</h3>
+                    <p class="dosen-meta"><strong>SINTA ID:</strong> 6983121</p>
+                    <div class="dosen-links">
+                        <a href="https://sinta.kemdikbud.go.id/authors/profile/6983121" target="_blank" class="btn-sinta">SINTA Profile</a>
+                        <a href="https://scholar.google.com/citations?user=8dE9moQAAAAJ&hl=en&oi=ao" target="_blank" class="btn-gs">Google Scholar</a>
+                    </div>
+                </div>
+
+                <!-- DOSEN 9 -->
+                <div class="dosen-card">
+                    <img src="dosen-ridwan.jpg" alt="Ridwan Gumilar" class="dosen-img">
+                    <h3 class="dosen-name">Ridwan Gumilar, M.Pd.</h3>
+                    <p class="dosen-meta"><strong>SINTA ID:</strong> 6011737</p>
+                    <div class="dosen-links">
+                        <a href="https://sinta.kemdikbud.go.id/authors/profile/6011737" target="_blank" class="btn-sinta">SINTA Profile</a>
+                        <a href="https://scholar.google.com/citations?user=zjWVFMAAAAAJ&hl=en&oi=ao" target="_blank" class="btn-gs">Google Scholar</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js?v=26"></script>
+</body>
+</html>
