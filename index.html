@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Program Studi Pendidikan Kepelatihan Olahraga - Universitas Siliwangi</title>
-    <link rel="stylesheet" href="style.css?v=21">
+    <!-- Versi dinaikkan ke v=25 untuk memastikan pembaruan dimuat -->
+    <link rel="stylesheet" href="style.css?v=25">
     <link rel="icon" href="Logo-unsil1.jpg" type="image/jpg">
 </head>
 <body>
@@ -30,13 +31,21 @@
                     <li><a href="sejarah-prodi.html">Sejarah Prodi</a></li>
                     <li><a href="vmts-prodi.html">VMTS Prodi</a></li>
                     <li><a href="struktur-organisasi.html">Struktur Organisasi Prodi</a></li>
-                    <li><a href="#">Dosen</a></li> </ul>
+                    <!-- Link Dosen dipastikan mengarah ke dosen.html -->
+                    <li><a href="dosen.html">Dosen</a></li> 
+                </ul>
             </li>
-            <li><a href="#">AKADEMIK</a></li> <li><a href="kurikulum.html">KURIKULUM</a></li>
-            <li><a href="#">GALERI</a></li> <li><a href="#">ALUMNI</a></li> <li class="dropdown">
+            <li><a href="#">AKADEMIK</a></li> 
+            <li><a href="kurikulum.html">KURIKULUM</a></li>
+            <li><a href="#">GALERI</a></li> 
+            <li><a href="#">ALUMNI</a></li> 
+            <li class="dropdown">
                 <a href="#">TRI DHARMA ▾</a>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Pendidikan/Pengajaran</a></li> <li><a href="#">Penelitian</a></li> <li><a href="#">Pengabdian</a></li> </ul>
+                    <li><a href="#">Pendidikan/Pengajaran</a></li> 
+                    <li><a href="#">Penelitian</a></li> 
+                    <li><a href="#">Pengabdian</a></li> 
+                </ul>
             </li>
             <li><a href="kontak-kami.html">KONTAK KAMI</a></li>
         </ul>
@@ -46,39 +55,42 @@
         <img id="heroImage" src="Header-PKO.jpg" alt="Banner Utama Prodi PKO Unsil">
     </section>
 
-    <section class="berita-section" style="margin-bottom: 80px;">
-        <div class="berita-header">
-            <h2>BERITA TERKINI & INFORMASI</h2>
+    <!-- BAGIAN BERITA YANG SUDAH DIRAPIKAN -->
+    <section class="berita-section" style="margin: 60px auto 80px; max-width: 1200px; padding: 0 20px;">
+        <div class="berita-header" style="text-align: center; margin-bottom: 40px;">
+            <h2 style="color: #1e40af; font-size: 2rem; display: inline-block; border-bottom: 3px solid #facc15; padding-bottom: 5px; text-transform: uppercase;">BERITA TERKINI & INFORMASI</h2>
         </div>
         
-        <div class="berita-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px;">
+        <div class="berita-grid" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; align-items: stretch;">
             
-            <div class="berita-card" style="max-width: 400px; width: 100%;">
-                <video width="100%" controls style="border-bottom: 1px solid #f3f4f6; max-height: 225px; object-fit: cover; background: #000; display: block;">
+            <!-- Berita 1: Video -->
+            <div class="berita-card" style="max-width: 450px; width: 100%; background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #e5e7eb; display: flex; flex-direction: column;">
+                <video width="100%" height="250" controls style="object-fit: cover; background: #000; border-bottom: 1px solid #e5e7eb; flex-shrink: 0;">
                     <source src="Sambutan-wakil-rektor.mp4" type="video/mp4">
                     Maaf, browser Anda tidak mendukung pemutaran video ini.
                 </video>
                 
-                <div class="berita-content">
-                    <span class="berita-title" style="color: #166534;">MARI BERGABUNG BERSAMA PRODI PKO UNIVERSITAS SILIWANGI!</span>
-                    <p class="berita-meta">Sambutan & Penerimaan Mahasiswa Baru</p>
-                    <p class="berita-excerpt">
+                <div class="berita-content" style="padding: 25px; display: flex; flex-direction: column; flex-grow: 1;">
+                    <span class="berita-title" style="display: block; font-size: 1.1rem; font-weight: bold; color: #166534; margin-bottom: 10px; line-height: 1.4; text-transform: uppercase;">MARI BERGABUNG BERSAMA PRODI PKO UNIVERSITAS SILIWANGI!</span>
+                    <p class="berita-meta" style="font-size: 0.85rem; color: #6b7280; margin-bottom: 15px;">Sambutan & Penerimaan Mahasiswa Baru</p>
+                    <p class="berita-excerpt" style="font-size: 0.95rem; color: #4b5563; margin-bottom: 25px; line-height: 1.6; text-align: justify;">
                         Wujudkan impianmu menjadi pelatih, pendidik, dan wirausahawan olahraga profesional! Program Studi Pendidikan Kepelatihan Olahraga (PKO) Universitas Siliwangi kini membuka pendaftaran untuk calon mahasiswa baru. Kembangkan potensimu melalui pendekatan <em>sport science</em> dan fasilitas modern kami. <strong>Jadilah bagian dari generasi juara!</strong>
                     </p>
-                    <a href="https://pmb.unsil.ac.id/" target="_blank" class="berita-link" style="display: inline-block; background-color: #facc15; color: #111827; padding: 10px 15px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 10px; transition: background-color 0.2s;">
+                    <a href="https://pmb.unsil.ac.id/" target="_blank" class="berita-link" style="margin-top: auto; align-self: flex-start; background-color: #facc15; color: #111827; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; border: 1px solid #eab308; transition: opacity 0.2s;">
                         Daftar Sekarang &rarr;
                     </a>
                 </div>
             </div>
 
-            <div class="berita-card" style="max-width: 400px; width: 100%;">
-                <img src="Pengumuman-Seleksi-Mandiri-Unsil.jpg" alt="Seleksi Mandiri Unsil">
+            <!-- Berita 2: Gambar -->
+            <div class="berita-card" style="max-width: 450px; width: 100%; background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); border: 1px solid #e5e7eb; display: flex; flex-direction: column;">
+                <img src="Pengumuman-Seleksi-Mandiri-Unsil.jpg" alt="Seleksi Mandiri Unsil" style="width: 100%; height: 250px; object-fit: cover; border-bottom: 1px solid #e5e7eb; flex-shrink: 0;">
                 
-                <div class="berita-content">
-                    <a href="https://unsil.ac.id/2026/06/15/pengumuman-penerimaan-mahasiswa-baru-jalur-seleksi-mandiri-universitas-siliwangi-tahun-2026/" target="_blank" class="berita-title">PENGUMUMAN PENERIMAAN MAHASISWA BARU JALUR SELEKSI MANDIRI UNIVERSITAS SILIWANGI TAHUN 2026</a>
-                    <p class="berita-meta">Post date: 15/06/2026 - 10:00 WIB</p>
-                    <p class="berita-excerpt">Pengumuman resmi mengenai hasil penerimaan mahasiswa baru Universitas Siliwangi melalui jalur Seleksi Mandiri tahun akademik 2026/2027 telah dirilis. Silakan periksa hasil kelulusan Anda melalui tautan di bawah ini.</p>
-                    <a href="https://unsil.ac.id/2026/06/15/pengumuman-penerimaan-mahasiswa-baru-jalur-seleksi-mandiri-universitas-siliwangi-tahun-2026/" target="_blank" class="berita-link" style="display: inline-block; margin-top: 10px;">
+                <div class="berita-content" style="padding: 25px; display: flex; flex-direction: column; flex-grow: 1;">
+                    <a href="https://unsil.ac.id/2026/06/15/pengumuman-penerimaan-mahasiswa-baru-jalur-seleksi-mandiri-universitas-siliwangi-tahun-2026/" target="_blank" class="berita-title" style="display: block; font-size: 1.1rem; font-weight: bold; color: #1e40af; margin-bottom: 10px; line-height: 1.4; text-transform: uppercase; text-decoration: none;">PENGUMUMAN PENERIMAAN MAHASISWA BARU JALUR SELEKSI MANDIRI UNIVERSITAS SILIWANGI TAHUN 2026</a>
+                    <p class="berita-meta" style="font-size: 0.85rem; color: #6b7280; margin-bottom: 15px;">Post date: 15/06/2026 - 10:00 WIB</p>
+                    <p class="berita-excerpt" style="font-size: 0.95rem; color: #4b5563; margin-bottom: 25px; line-height: 1.6; text-align: justify;">Pengumuman resmi mengenai hasil penerimaan mahasiswa baru Universitas Siliwangi melalui jalur Seleksi Mandiri tahun akademik 2026/2027 telah dirilis. Silakan periksa hasil kelulusan Anda melalui tautan di bawah ini.</p>
+                    <a href="https://unsil.ac.id/2026/06/15/pengumuman-penerimaan-mahasiswa-baru-jalur-seleksi-mandiri-universitas-siliwangi-tahun-2026/" target="_blank" class="berita-link" style="margin-top: auto; align-self: flex-start; background-color: #166534; color: #ffffff; padding: 10px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; transition: opacity 0.2s;">
                         Selengkapnya &rarr;
                     </a>
                 </div>
@@ -87,6 +99,6 @@
         </div>
     </section>
 
-    <script src="script.js?v=21"></script>
+    <script src="script.js?v=25"></script>
 </body>
 </html>
